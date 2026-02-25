@@ -1,0 +1,14 @@
+.resources-image {
+    background-image: url(/assets/img/pages/resources/resources.png);
+}
+.page-title.resources-image {
+    background-attachment: inherit;
+}
+.page-title.resources-image:before {
+    background: none;
+    opacity: 1;
+    background-image: linear-gradient(to right, rgb(7 81 84),rgba(255,0,0,0));
+}
+.resources-ripple canvas {
+    z-index: 1 !important;
+}

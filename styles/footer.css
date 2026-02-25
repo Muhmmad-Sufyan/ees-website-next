@@ -1,0 +1,98 @@
+.f-socialmedia img {
+    max-height: 32px;
+}
+.heart-color {
+    color: #ee0000;
+}
+.itinitial-color {
+    color: #4c8baf;
+    font-weight: bold;
+}
+.footer-area {
+    padding: 100px 0 50px;
+    background:url(/assets/img/pages/common/footer-bg.jpeg);
+    background-attachment: fixed; background-position: center;
+    background-size: cover;
+}
+.footer-logo {
+    display: block;
+    margin-top: -40px;
+}
+.footer-area ul.f-socialmedia li {
+    display: inline-block;
+    margin: 5px; padding-left: 0;
+}
+.footer-area h4 {
+    line-height: 22px;
+    margin-bottom: 30px;
+    color: #1d1d1d;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 20px;
+}
+.footer-area h4::before{
+    content: '';
+    background:#fca20b ;
+    height: 28px; width: 3px; position: absolute; left: 0; bottom: 0;
+}
+
+.footer-area h4 a {
+    color: #313131;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.footer-area h4 span {
+    color: #fca20b;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+.footer-area ul li {
+    display: block; margin-bottom: 10px; padding-left: 20px;
+}
+.footer-area ul li a, .footer-area ul li, .footer-area p {
+    font-size: 14px;
+    letter-spacing: 0.5px; font-weight: 300;
+    color: #313131;
+}
+.footer-area ul li a:hover, .footer-area ul li a:focus {
+    color: #fca20b;
+    border-color: #fca20b;
+}
+.f-contact-info li span {
+    position: absolute;
+    margin-left: -25px;
+}
+.footer-area p {
+    line-height: 20px;
+    margin-top: 30px;
+}
+.copyright-area {
+    text-align: center;
+    padding-top: 70px;
+}
+.footer-area .copyright-area p{
+    margin-top: 10px;
+}
+.seprator {
+    max-width: 390px;
+    margin: 10px auto 50px;
+    height: 1px;
+    background: #ddd; position: relative;
+}
+.seprator img {
+    margin-top: -30px;
+    position: relative;
+    width: 24px;
+}
+.seprator::before{ content: ''; width: 50px; height: 50px;
+    background: #fff; left: 0; right: 0; margin: auto;
+    padding: 20px; border-radius: 50%; top: -25px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); position: absolute;
+}

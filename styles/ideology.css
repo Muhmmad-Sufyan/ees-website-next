@@ -1,0 +1,40 @@
+.ideology-image {
+    background-image: url(/assets/img/pages/ideology/ideology.png);
+}
+.page-title.ideology-image {
+    background-attachment: inherit;
+}
+.page-title.ideology-image:before {
+    background: none;
+    opacity: 1;
+    background-image: linear-gradient(to right, rgb(7 81 84),rgba(255,0,0,0));
+}
+.ideology-ripple canvas {
+    z-index: 1 !important;
+}
+.single-ideology-item {
+    text-align: justify;
+}
+.ideo-img{
+    padding: 40px;
+}
+.ideo-img img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+@media only screen and (max-width: 991px) {
+    .ideo-img{
+        padding: 0px
+    }
+    .ideo-img img{
+        max-height: 200px;
+        position: inherit;
+    }
+    .single-ideology-item {
+        padding: 0;
+    }
+}

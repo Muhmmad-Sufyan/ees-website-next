@@ -1,0 +1,212 @@
+.item-bg-one {
+    background-image: url(/assets/img/pages/home/banner-images/banner-1.1.jpeg);
+}
+
+.item-bg-two {
+    background-image: url(/assets/img/pages/home/banner-images/banner-2.1.jpeg);
+}
+
+.item-bg-three {
+    background-image: url(/assets/img/pages/home/banner-images/banner-3.1.jpeg);
+}
+.owl-theme .owl-nav .owl-next, .owl-theme .owl-nav .owl-prev{
+    border:none;
+    margin:0px;
+}
+.owl-theme .owl-nav.disabled {
+    display: none;
+}
+.owl-theme .owl-dots .owl-dot {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+.main-banner-text {
+    text-align: left;
+    margin-left: 50px;
+}
+.home-slides .main-banner::before{
+    background: none;
+     opacity: 1;
+    background-image: linear-gradient(to right, rgb(7 81 84),rgba(255,0,0,0),rgba(255,0,0,0));
+}
+.single-author .pic {
+    background-color: #2d7a7d;
+}
+.author-quote {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.single-author .author-quote p {
+    color: #fff;
+    font-size: 22px;
+    line-height: 30px;
+}
+.customList {
+    padding-left: 25px;
+}
+.customList.customListSquare {
+    padding-left: 45px;
+}
+.customList li {
+    font-weight: 300;
+    line-height: 23px;
+    color: #666666;
+    font-size: 15px;
+}
+.customList li::marker {
+    font-weight: bold;
+}
+.customList.customListDisc li {
+    list-style: disc !important;
+}
+.customList.customListSquare li {
+    list-style: square !important;
+}
+.customList.customListDecimal li {
+    list-style: decimal;
+}
+.customList.customListAlphabets {
+    padding-left: 20px;
+}
+.customList.customListAlphabets li {
+    list-style: upper-alpha;
+}
+.insp-heading {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #fca20b;
+    position: absolute;
+    top: 0;
+    width: 85%;
+}
+ul.welcome-list {
+    list-style-type: disc !important;
+    padding-left: 1em;
+}
+ul.welcome-list li{
+    list-style: inherit;
+}
+.pb-80 {
+    padding-bottom: 80px;
+}
+.single-ideology p {
+    height: 160px;
+    overflow: hidden;
+}
+.single-ideology h4 {
+    height: 50px;
+    overflow: hidden;
+}
+.single-book .book-info .price, .single-book .book-info .title{
+    display:none;
+}
+
+.books-w {
+    height: 650px;
+    background: url(/assets/img/pages/home/books.png);
+    background-attachment: fixed;
+    background-size: contain;
+}
+#welcome, #welcome2, #about {
+    overflow-x: hidden;
+}
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: initial;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.fa-angle-left:before {
+    content: "\f104";
+}
+.diagnosis-content {
+    position: relative;
+    z-index: 1;
+}
+.curriculum-area p i {
+    transition: .4s;
+    width: 40px;
+    height: 40px;
+    background: #fca20b;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    padding-left: 5px;
+}
+.curriculum-area p i:hover{
+    background: #ffffff;
+    color: #fca20b;
+}
+.blue-bg-1 {
+    background: #e4fdf6 !important;
+    margin-bottom: 60px;
+}
+.yellow-bg-1 {
+    background: #fdf9ba !important;
+}
+#new-collection .owl-stage-outer {
+    padding-top: 20px;
+}
+#new-collection .owl-item:hover {
+    transform: scale(1.2);
+}
+.single-author .pic.driveUs {
+    background-color: transparent;
+}
+.ril__image {
+    max-width: 50% !important;
+}
+.diagnosis-img1 {
+    position: relative; padding-right: 80px;
+}
+.diagnosis-img1::before {
+    position: absolute;
+    content: '';
+    width: 350px;
+    height: 350px; background: url(/assets/img/pages/home/vintage.png); background-size: contain;
+    right: -10%;
+
+}
+@media only screen and (max-width: 767px) {
+    #welcome.ptb-80, .home-services-area.services-area.ptb-80 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .services-area .services-img {
+        padding: 0px;
+    }
+    .single-services {
+        margin-bottom: 0;
+    }
+    #welcome2.pb-80 {
+        padding-bottom: 5px;
+    }
+    .pb-xs-25 {
+        padding-bottom: 25px;
+    }
+    .books-w {
+         background-size: unset;
+     }
+    .home-slides .main-banner::before{
+        background: #075154;
+        opacity: 0.7;
+        background-image: none;
+    }
+    .main-banner-text {
+        text-align: center;
+        margin-left: 0px;
+    }
+    .blue-bg-1 {
+        margin-top: 60px;
+    }
+}

@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "jquery": "^3.7.1",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-image-lightbox": "^5.1.4",
+    "react-owl-carousel": "^2.3.3",
+    "react-water-wave": "^2.0.1"
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",

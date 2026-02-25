@@ -1,0 +1,51 @@
+.diagnosis-image {
+    background-image: url(/assets/img/pages/diagnosis/diagnosis.png);
+}
+.page-title.diagnosis-image {
+    background-attachment: inherit;
+}
+.page-title.diagnosis-image:before {
+    background: none;
+    opacity: 1;
+    background-image: linear-gradient(to right, rgb(7 81 84),rgba(255,0,0,0));
+}
+.diagnosis-ripple canvas {
+    z-index: 1 !important;
+}
+.diag-img-2 {
+    position: absolute;
+    right: auto;
+    left: 0;
+    z-index: -1;
+    text-align: left;
+    max-width: 30%;
+    padding-top: 30px;
+}
+.diag-img-1 {
+     position: absolute;
+     right: auto;
+     right: 0;
+     z-index: -1;
+     text-align: right;
+     max-width: 30%;
+ }
+@media only screen and (max-width: 991px) {
+    .diag-img-1 {
+        max-width: 70%;
+    }
+    .diag-img-2 {
+         position: relative;
+         right: auto;
+         left: 0;
+         z-index: -1;
+         text-align: left;
+         max-width: 50%;
+         margin: 0px auto;
+     }
+    .diag-step, .diag-step-1 {
+          padding: 0;
+      }
+    .single-diag-item {
+            margin-top: 0px;
+       }
+}

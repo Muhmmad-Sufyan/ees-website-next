@@ -1,0 +1,14 @@
+.products-image {
+    background-image: url(/assets/img/pages/products/products.png);
+}
+.page-title.products-image {
+    background-attachment: inherit;
+}
+.page-title.products-image:before {
+    background: none;
+    opacity: 1;
+    background-image: linear-gradient(to right, rgb(7 81 84),rgba(255,0,0,0));
+}
+.products-ripple canvas {
+    z-index: 1 !important;
+}
