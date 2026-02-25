@@ -22,7 +22,7 @@
     padding: 0;
 }
 .main-banner-text {
-    text-align: left;
+    text-align: left !important;
     margin-left: 50px;
 }
 .home-slides .main-banner::before{
