@@ -18,7 +18,7 @@
     left: 0;
     z-index: -1;
     text-align: left;
-    max-width: 30%;
+    max-width: 30% !important;
     padding-top: 30px;
 }
 .diag-img-1 {
@@ -27,11 +27,11 @@
      right: 0;
      z-index: -1;
      text-align: right;
-     max-width: 30%;
+     max-width: 30% !important;
  }
 @media only screen and (max-width: 991px) {
     .diag-img-1 {
-        max-width: 70%;
+        max-width: 70% !important;
     }
     .diag-img-2 {
          position: relative;
@@ -39,7 +39,7 @@
          left: 0;
          z-index: -1;
          text-align: left;
-         max-width: 50%;
+         max-width: 50% !important;
          margin: 0px auto;
      }
     .diag-step, .diag-step-1 {
