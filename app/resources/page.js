@@ -11,7 +11,7 @@ export default function Resources() {
     <>
       <WaterWave className="resources-ripple">
         {(methods) => (
-          <div className="page-title resources-image ripple-effect jquery-ripples">
+          <div className="page-title resources-image ripple-effect">
             <div className="d-table">
               <div className="d-table-cell">
                 <div className="container">

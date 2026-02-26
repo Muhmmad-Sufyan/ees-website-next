@@ -3,11 +3,6 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import $ from "jquery";
-if (typeof window !== "undefined") {
-  window.$ = $;
-  window.jQuery = $;
-}
 import AOS from "aos";
 import Lightbox from "react-image-lightbox";
 import "@/styles/home.css";
@@ -79,48 +74,40 @@ function Home() {
           "<i className='fa fa-angle-right'>></i>",
         ]}
         onTranslate={() => {
-          window.jQuery &&
-            window
-              .jQuery(".main-banner h4")
-              .removeClass("animated fadeInDown")
-              .css("opacity", "0");
-          window.jQuery &&
-            window
-              .jQuery(".main-banner h1")
-              .removeClass("animated fadeInUp")
-              .css("opacity", "0");
-          window.jQuery &&
-            window
-              .jQuery(".main-banner p")
-              .removeClass("animated zoomIn")
-              .css("opacity", "0");
-          window.jQuery &&
-            window
-              .jQuery(".main-banner .btn")
-              .removeClass("animated fadeInDown")
-              .css("opacity", "0");
+          document.querySelectorAll(".main-banner h4").forEach((el) => {
+            el.classList.remove("animated", "fadeInDown");
+            el.style.opacity = "0";
+          });
+          document.querySelectorAll(".main-banner h1").forEach((el) => {
+            el.classList.remove("animated", "fadeInUp");
+            el.style.opacity = "0";
+          });
+          document.querySelectorAll(".main-banner p").forEach((el) => {
+            el.classList.remove("animated", "zoomIn");
+            el.style.opacity = "0";
+          });
+          document.querySelectorAll(".main-banner .btn").forEach((el) => {
+            el.classList.remove("animated", "fadeInDown");
+            el.style.opacity = "0";
+          });
         }}
         onTranslated={() => {
-          window.jQuery &&
-            window
-              .jQuery(".main-banner h4")
-              .addClass("animated fadeInDown")
-              .css("opacity", "1");
-          window.jQuery &&
-            window
-              .jQuery(".main-banner h1")
-              .addClass("animated fadeInUp")
-              .css("opacity", "1");
-          window.jQuery &&
-            window
-              .jQuery(".main-banner p")
-              .addClass("animated zoomIn")
-              .css("opacity", "1");
-          window.jQuery &&
-            window
-              .jQuery(".main-banner .btn")
-              .addClass("animated fadeInDown")
-              .css("opacity", "1");
+          document.querySelectorAll(".main-banner h4").forEach((el) => {
+            el.classList.add("animated", "fadeInDown");
+            el.style.opacity = "1";
+          });
+          document.querySelectorAll(".main-banner h1").forEach((el) => {
+            el.classList.add("animated", "fadeInUp");
+            el.style.opacity = "1";
+          });
+          document.querySelectorAll(".main-banner p").forEach((el) => {
+            el.classList.add("animated", "zoomIn");
+            el.style.opacity = "1";
+          });
+          document.querySelectorAll(".main-banner .btn").forEach((el) => {
+            el.classList.add("animated", "fadeInDown");
+            el.style.opacity = "1";
+          });
         }}
       >
         <div className="main-banner item-bg-one item">

@@ -11,7 +11,7 @@ export default function Contact() {
     <>
       <WaterWave className="contact-ripple">
         {(methods) => (
-          <div className="page-title contact-image ripple-effect jquery-ripples">
+          <div className="page-title contact-image ripple-effect">
             <div className="d-table">
               <div className="d-table-cell">
                 <div className="container">

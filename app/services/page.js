@@ -11,7 +11,7 @@ export default function Services() {
     <>
       <WaterWave className="service-ripple">
         {(methods) => (
-          <div className="page-title service-image ripple-effect jquery-ripples">
+          <div className="page-title service-image ripple-effect">
             <div className="d-table">
               <div className="d-table-cell">
                 <div className="container">

@@ -29,10 +29,6 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Script
-          src="/assets/js/jquery.min.js"
-          strategy="beforeInteractive"
-        />
-        <Script
           src="/assets/js/popper.min.js"
           strategy="beforeInteractive"
         />
@@ -43,10 +39,6 @@ export default function RootLayout({ children }) {
         <Script
           src="/assets/js/wow.js"
           strategy="afterInteractive"
-        />
-        <Script
-          src="/assets/js/main.min.js"
-          strategy="lazyOnload"
         />
         <Header />
         {children}
