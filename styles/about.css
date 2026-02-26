@@ -1,15 +1,21 @@
 /* About Page Header */
 .about-image {
-    background-image: url(/assets/img/pages/home/banner-images/banner-1.1.jpeg);
+    background-image: url(/assets/img/banner-images/about.png);
+    background-size: 344px auto !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom right 150px !important;
 }
+
 .page-title.about-image {
     background-attachment: inherit;
 }
+
 .page-title.about-image:before {
     background: none;
     opacity: 1;
-    background-image: linear-gradient(to right, rgb(7 81 84), rgba(255, 0, 0, 0));
+    background-image: linear-gradient(to right, rgb(7 81 84), rgba(7, 81, 84, 0.699));
 }
+
 .about-ripple canvas {
     z-index: 1 !important;
 }
@@ -18,6 +24,7 @@
 .founders-section {
     background-color: #f9f9f9;
 }
+
 .founders-subtitle {
     display: block;
     color: #fca20b;
@@ -27,11 +34,13 @@
     text-transform: uppercase;
     margin-bottom: 10px;
 }
+
 .founders-section .section-title h2 {
     font-size: 36px;
     font-weight: 700;
     color: #1d1d1d;
 }
+
 .founders-section .section-title h2 span {
     color: #fca20b;
 }
@@ -45,6 +54,7 @@
     border: 1px solid #eee;
     transition: transform 0.3s ease;
 }
+
 .founder-card:hover {
     transform: translateY(-5px);
 }
@@ -54,6 +64,7 @@
     align-items: center;
     margin-bottom: 20px;
 }
+
 .founder-avatar {
     width: 70px;
     height: 70px;
@@ -63,17 +74,20 @@
     flex-shrink: 0;
     border: 3px solid #fca20b;
 }
+
 .founder-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .founder-info h4 {
     font-size: 18px;
     font-weight: 700;
     color: #1d1d1d;
     margin-bottom: 4px;
 }
+
 .founder-role {
     font-size: 12px;
     font-weight: 600;
@@ -87,12 +101,14 @@
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
+
 .founder-message p {
     font-size: 15px;
     line-height: 26px;
     color: #555;
     font-style: italic;
 }
+
 .founder-bio p {
     font-size: 14px;
     line-height: 24px;
@@ -105,15 +121,18 @@
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .cta-heading {
     font-size: 40px;
     font-weight: 700;
     color: #1d1d1d;
     margin-bottom: 20px;
 }
+
 .cta-heading span {
     color: #fca20b;
 }
+
 .cta-text {
     font-size: 16px;
     line-height: 28px;
@@ -121,12 +140,14 @@
     max-width: 600px;
     margin: 0 auto 35px;
 }
+
 .cta-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
 }
+
 .btn.btn-primary-filled {
     background-color: #fca20b;
     color: #fff;
@@ -138,10 +159,12 @@
     letter-spacing: 1px;
     transition: all 0.3s ease;
 }
+
 .btn.btn-primary-filled:hover {
     background-color: #e89200;
     border-color: #e89200;
 }
+
 .btn.btn-primary-outlined {
     background-color: transparent;
     color: #fca20b;
@@ -153,9 +176,11 @@
     letter-spacing: 1px;
     transition: all 0.3s ease;
 }
+
 .btn.btn-primary-outlined:hover {
-   
-  background: #fca20b; color: #fff;
+
+    background: #fca20b;
+    color: #fff;
 }
 
 /* Responsive */
@@ -163,9 +188,11 @@
     .cta-heading {
         font-size: 28px;
     }
+
     .founders-section .section-title h2 {
         font-size: 28px;
     }
+
     .founder-card {
         padding: 20px;
     }
