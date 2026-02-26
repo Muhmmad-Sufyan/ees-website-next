@@ -1,17 +1,28 @@
-
 /*
 ==============================
 Default CSS
 ==============================
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
 body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 0;
   font-weight: 400;
   line-height: 1;
@@ -29,6 +40,7 @@ ul li {
 :focus {
   outline: 0 !important;
 }
+
 p {
   margin-bottom: 20px;
   font-weight: 300;
@@ -44,14 +56,18 @@ a {
   transition: .4s;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #fca20b;
   text-decoration: none;
 }
-.btn-check:focus + .btn, .btn:focus {
+
+.btn-check:focus+.btn,
+.btn:focus {
   outline: 0;
   box-shadow: 0 0 0 .25rem rgba(253, 193, 13, 0.25);
 }
+
 img {
   max-width: 100%;
 }
@@ -60,9 +76,11 @@ img {
   padding-bottom: 80px;
   padding-top: 80px;
 }
-.pb-0{
+
+.pb-0 {
   padding-bottom: 0 !important;
 }
+
 .d-table {
   width: 100%;
   height: 100%;
@@ -71,7 +89,11 @@ img {
 .d-table-cell {
   vertical-align: middle;
 }
-.text-justify{  text-align: justify;}
+
+.text-justify {
+  text-align: justify;
+}
+
 .bg-f6f6f6 {
   background: #f6f6f6;
 }
@@ -82,7 +104,8 @@ img {
   font-size: 16px;
   border-radius: 30px;
   -webkit-transition: .4s;
-  transition: .4s; text-transform: uppercase;
+  transition: .4s;
+  text-transform: uppercase;
 }
 
 .btn-primary {
@@ -91,42 +114,63 @@ img {
   border-color: #fca20b;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary.disabled:hover, .btn-primary.disabled:focus {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.disabled:hover,
+.btn-primary.disabled:focus {
   color: #fca20b;
   background-color: #fff;
   border-color: #fca20b;
 }
 
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active {
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active {
   color: #fff;
   background-color: #fca20b;
   border-color: #fca20b;
 }
 
-.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus {
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
-.btn-primary.focus, .btn-primary:focus {
+.btn-primary.focus,
+.btn-primary:focus {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
-.btn-primary.disabled, .btn-primary:disabled {
+.btn-primary.disabled,
+.btn-primary:disabled {
   color: #fff;
   background-color: #fca20b;
   border-color: #fca20b;
   opacity: 1;
 }
 
-.btn-primary-outlined{
+.btn-primary-outlined {
   border: 2px solid #fca20b;
   background: transparent;
-  color: #fca20b; min-width: 200px;
+  color: #fca20b;
+  min-width: 200px;
 }
-.btn-primary-outlined:hover{
-  background: #fca20b; color: #fff;
+
+.btn-primary-outlined:hover {
+  background: #fca20b;
+  color: #fff;
+}
+
+.btn-black-outlined {
+  border: 2px solid #000000;
+  background: transparent;
+  color: #000000;
+  min-width: 200px;
+}
+.btn-black-outlined:hover{
+  background: #000000;
+  color: #fff;
 }
 /* Section Title */
 .section-title {
@@ -135,7 +179,8 @@ img {
   position: relative;
 }
 
-.section-title::before, .section-title::after {
+.section-title::before,
+.section-title::after {
   content: '';
   position: absolute;
   width: 3px;
@@ -201,7 +246,7 @@ img {
   border-color: #dddddd;
   outline: 0;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 
@@ -290,7 +335,7 @@ Preloader CSS
   height: 60px;
   position: absolute;
   -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
   top: 50%;
   right: 0;
   margin: -60px auto 0;
@@ -302,7 +347,7 @@ Preloader CSS
   height: 50%;
   position: relative;
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .preloader .folding-cube .cube::before {
@@ -314,73 +359,85 @@ Preloader CSS
   height: 100%;
   background-color: #fca20b;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
-          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
 }
 
 .preloader .folding-cube .cube2 {
   -webkit-transform: scale(1.1) rotateZ(90deg);
-          transform: scale(1.1) rotateZ(90deg);
+  transform: scale(1.1) rotateZ(90deg);
 }
 
 .preloader .folding-cube .cube2::before {
   -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .preloader .folding-cube .cube3 {
   -webkit-transform: scale(1.1) rotateZ(180deg);
-          transform: scale(1.1) rotateZ(180deg);
+  transform: scale(1.1) rotateZ(180deg);
 }
 
 .preloader .folding-cube .cube3::before {
   -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 .preloader .folding-cube .cube4 {
   -webkit-transform: scale(1.1) rotateZ(270deg);
-          transform: scale(1.1) rotateZ(270deg);
+  transform: scale(1.1) rotateZ(270deg);
 }
 
 .preloader .folding-cube .cube4::before {
   -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 
 @-webkit-keyframes sk-foldCubeAngle {
-  0%, 10% {
+
+  0%,
+  10% {
     -webkit-transform: perspective(140px) rotateX(-180deg);
-            transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
-  25%, 75% {
+
+  25%,
+  75% {
     -webkit-transform: perspective(140px) rotateX(0deg);
-            transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
-  90%, 100% {
+
+  90%,
+  100% {
     -webkit-transform: perspective(140px) rotateY(180deg);
-            transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
     opacity: 0;
   }
 }
 
 @keyframes sk-foldCubeAngle {
-  0%, 10% {
+
+  0%,
+  10% {
     -webkit-transform: perspective(140px) rotateX(-180deg);
-            transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
-  25%, 75% {
+
+  25%,
+  75% {
     -webkit-transform: perspective(140px) rotateX(0deg);
-            transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
-  90%, 100% {
+
+  90%,
+  100% {
     -webkit-transform: perspective(140px) rotateY(180deg);
-            transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
     opacity: 0;
   }
 }
@@ -393,14 +450,21 @@ Main Header CSS
 .top-header {
   background: #1e6568;
 }
-.vwrap, .vitem {
+
+.vwrap,
+.vitem {
   height: 30px;
   line-height: 30px;
 }
+
 .vwrap {
   overflow: hidden;
 }
-.hmove { display: flex; }
+
+.hmove {
+  display: flex;
+}
+
 .vitem {
   text-align: center;
   color: #fcc00b;
@@ -411,16 +475,29 @@ Main Header CSS
   box-sizing: border-box;
   text-align: center;
 }
+
 /* CHANGE KEYFRAMES IF YOU ADD/REMOVE ITEMS */
-.vmove {  display: flex; }
-@keyframes tickerh {
-  0% { transform: translate3d(100%, 0, 0); }
-  100% { transform: translate3d(-400%, 0, 0); }
+.vmove {
+  display: flex;
 }
+
+@keyframes tickerh {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-400%, 0, 0);
+  }
+}
+
 .vmove {
   animation: tickerh linear 40s infinite;
 }
-.vmove:hover { animation-play-state: paused; }
+
+.vmove:hover {
+  animation-play-state: paused;
+}
 
 .navbar {
   position: fixed;
@@ -430,8 +507,9 @@ Main Header CSS
   z-index: 2;
   padding-top: 0;
   padding-bottom: 0;
-  background: rgba(0,0,0,0.2) !important;
+  background: rgba(0, 0, 0, 0.2) !important;
 }
+
 .header-sticky.is-sticky {
   position: fixed;
   top: 0;
@@ -449,7 +527,8 @@ Main Header CSS
 
 .navbar-light .navbar-brand {
   color: #ffffff;
-  font-weight: 600; max-width: 140px;
+  font-weight: 600;
+  max-width: 140px;
   text-transform: uppercase;
 }
 
@@ -460,9 +539,11 @@ Main Header CSS
   text-transform: lowercase;
 }
 
-.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
   color: #ffffff;
 }
+
 .navbar-brand.logo-dark {
   display: none;
 }
@@ -470,16 +551,20 @@ Main Header CSS
 .header-sticky.is-sticky .navbar-brand.logo-dark {
   display: block;
 }
+
 .header-sticky.is-sticky .navbar-brand.logo-light {
   display: none;
 }
+
 .navbar-light .navbar-nav .nav-item:last-child {
   padding-right: 0;
 }
 
 .navbar-light .navbar-nav .nav-item .nav-link {
   color: #ffffff;
-  padding: 10px 15px; line-height: 60px; position: relative;
+  padding: 10px 15px;
+  line-height: 60px;
+  position: relative;
 
 }
 
@@ -489,14 +574,15 @@ Main Header CSS
   width: 100%;
   height: 8px;
   background: #FCA20B;
-    background-repeat: repeat;
-    background-size: auto;
+  background-repeat: repeat;
+  background-size: auto;
   bottom: -8px;
   position: absolute;
   left: 0;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .navbar-light .navbar-nav .nav-item .nav-link.active::after {
   content: '';
   width: 0;
@@ -509,12 +595,16 @@ Main Header CSS
   left: -10px;
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link.active, .navbar-light .navbar-nav .nav-item .nav-link.show, .navbar-light .navbar-nav .nav-item .nav-link:hover, .navbar-light .navbar-nav .nav-item .nav-link:focus {
+.navbar-light .navbar-nav .nav-item .nav-link.active,
+.navbar-light .navbar-nav .nav-item .nav-link.show,
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item .nav-link:focus {
   color: #fff;
   background: #fca20b;
 }
 
-.navbar-light .navbar-nav .active .nav-link, .navbar-light .navbar-nav.show .nav-link {
+.navbar-light .navbar-nav .active .nav-link,
+.navbar-light .navbar-nav.show .nav-link {
   color: #fca20b;
 }
 
@@ -525,14 +615,21 @@ Main Header CSS
 .header-sticky.is-sticky .navbar-light .navbar-nav .nav-link {
   color: #000000;
 }
+
 .header-sticky.is-sticky .navbar.navbar-light {
   background: #fff !important;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-}.header-sticky.is-sticky .navbar-light .navbar-nav .nav-link.active, .header-sticky.is-sticky .navbar-light .navbar-nav .nav-link.show, .header-sticky.is-sticky .navbar-light .navbar-nav .nav-link:hover, .header-sticky.is-sticky .navbar-light .navbar-nav .nav-link:focus {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header-sticky.is-sticky .navbar-light .navbar-nav .nav-link.active,
+.header-sticky.is-sticky .navbar-light .navbar-nav .nav-link.show,
+.header-sticky.is-sticky .navbar-light .navbar-nav .nav-link:hover,
+.header-sticky.is-sticky .navbar-light .navbar-nav .nav-link:focus {
   color: #fff;
 }
 
-.header-sticky.is-sticky .navbar-light .navbar-nav .active .nav-link, .header-sticky.is-sticky .navbar-light .navbar-nav .show .nav-link {
+.header-sticky.is-sticky .navbar-light .navbar-nav .active .nav-link,
+.header-sticky.is-sticky .navbar-light .navbar-nav .show .nav-link {
   color: #fca20b;
 }
 
@@ -541,19 +638,36 @@ Main Header CSS
 Main Banner CSS
 ==============================
 */
-.home-slides{
+.home-slides {
   position: relative;
 }
-.home-slides::after{
-  content: ''; position: absolute; width: 100%; height: 90px; background: url(../img/slider-bottom.png);
-  background-repeat: no-repeat; background-position: center; bottom: 0; left: 0; right: 0;
+
+.home-slides::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  background: url(../img/slider-bottom.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-.home-slides .main-banner{
+
+.home-slides .main-banner {
   position: relative;
 }
-.home-slides .main-banner::before{
-  content: ''; top:0; bottom: 0;
-  position: absolute; background: none; opacity: 0.7; width: 100%; height: 100%;
+
+.home-slides .main-banner::before {
+  content: '';
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: none;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
 }
 
 .main-banner {
@@ -588,6 +702,7 @@ Main Banner CSS
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .main-banner-text h1 span {
   color: #fca20b;
   font-weight: 600;
@@ -597,14 +712,16 @@ Main Banner CSS
   color: #fff;
   max-width: 850px;
   margin: auto;
-    margin-bottom: auto;
+  margin-bottom: auto;
   margin-bottom: auto;
   margin-bottom: 30px;
   font-size: 22px;
   font-weight: 300;
   line-height: 30px;
 }
-.main-banner-text .btn:hover, .main-banner-text .btn:focus {
+
+.main-banner-text .btn:hover,
+.main-banner-text .btn:focus {
   border-color: #ffffff;
 }
 
@@ -612,7 +729,8 @@ Main Banner CSS
 /*  margin-top: 10px;*/
 /*}*/
 
-.main-banner-text .view-work:hover, .main-banner-text .view-work:focus {
+.main-banner-text .view-work:hover,
+.main-banner-text .view-work:focus {
   border-color: #fca20b;
   background: #fca20b;
   color: #ffffff;
@@ -737,11 +855,13 @@ Welcome Area CSS
   max-width: 300px;
   margin: auto;
 }
+
 .single-author {
   position: relative;
   max-width: 300px;
   margin: auto;
 }
+
 .single-author .author-quote {
   position: absolute;
   top: 0;
@@ -749,13 +869,16 @@ Welcome Area CSS
   bottom: 0;
   margin: 25px;
   border-radius: 20px;
-  padding: 20px; text-align: center;
+  padding: 20px;
+  text-align: center;
 }
+
 .single-author .author-quote .auth-name {
   color: #fca20b;
   font-size: 12px;
   font-weight: 600;
 }
+
 .single-author .pic img {
   width: 100%;
   height: 100%;
@@ -783,7 +906,8 @@ Diagnosis Area CSS
   padding-left: 0;
 }
 
-.diagnosis-content .section-title::before, .diagnosis-content .section-title::after {
+.diagnosis-content .section-title::before,
+.diagnosis-content .section-title::after {
   display: none;
 }
 
@@ -813,6 +937,7 @@ Diagnosis Area CSS
 .diagnosis-content .pull-left {
   margin-right: 45px;
 }
+
 @-webkit-keyframes float_left_right {
   0% {
     -webkit-transform: translateX(-50px);
@@ -854,7 +979,12 @@ Diagnosis Area CSS
 }
 
 /**diagnosis page**/
-.diag-step, .diag-step-1{ position: relative; padding: 60px 0;}
+.diag-step,
+.diag-step-1 {
+  position: relative;
+  padding: 60px 0;
+}
+
 .diag-img-1 {
   position: absolute;
   right: auto;
@@ -863,17 +993,21 @@ Diagnosis Area CSS
   text-align: right;
   max-width: 50%;
 }
+
 .single-diag-item {
   background: rgba(240, 240, 240, 0.9);
   padding: 30px;
   margin-top: 40px;
-  border-radius: 20px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
+
 .single-diag-item h4 {
   margin-bottom: 20px;
   text-transform: capitalize;
   font-weight: 600;
 }
+
 .diag-img-2 {
   position: absolute;
   right: auto;
@@ -882,28 +1016,45 @@ Diagnosis Area CSS
   text-align: left;
   max-width: 50%;
 }
+
 .flaws-wrap {
   padding: 40px 0;
 }
-.flaws-wrap h3{ text-align: center; margin: 30px 0;}
+
+.flaws-wrap h3 {
+  text-align: center;
+  margin: 30px 0;
+}
+
 .flaws-wrap .f-text {
   position: relative;
   padding: 30px;
   text-align: justify;
 }
+
 .flaw-content {
   max-width: 900px;
   margin: auto;
   background: #f8f8f8;
   position: relative;
 }
+
 .flaws-wrap .f-text h4 {
   margin-bottom: 20px;
   font-size: 22px;
   color: #fca20b;
   font-weight: 600;
 }
-.flaw-content::before{ content: ''; position: absolute; background:#eee; bottom: 0; right: 0;top: 0; width: 50%;}
+
+.flaw-content::before {
+  content: '';
+  position: absolute;
+  background: #eee;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: 50%;
+}
 
 /*
 ==============================
@@ -913,12 +1064,13 @@ ideology CSS
 .ideology-section {
   padding-bottom: 90px;
 }
+
 .single-ideology {
   border-radius: 10px;
   margin-bottom: 40px;
   position: relative;
   -webkit-box-shadow: 0 20px 40px 0 rgba(28, 30, 35, 0.2);
-          box-shadow: 0 20px 40px 0 rgba(28, 30, 35, 0.2);
+  box-shadow: 0 20px 40px 0 rgba(28, 30, 35, 0.2);
   background: #ffffff;
   padding: 20px;
   -webkit-transition: all 0.5s ease-in-out 0s;
@@ -929,7 +1081,7 @@ ideology CSS
   background: #fca20b;
   color: #ffffff;
   -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .single-ideology i {
@@ -950,13 +1102,14 @@ ideology CSS
 
 .single-ideology:hover i {
   background: #ffffff;
-color: #fca20b;
+  color: #fca20b;
 }
 
 .single-ideology h4 {
   margin-bottom: 20px;
   margin-top: 0px;
-  font-size: 20px;  line-height: 25px;
+  font-size: 20px;
+  line-height: 25px;
   font-weight: 500;
 }
 
@@ -988,6 +1141,7 @@ color: #fca20b;
 .single-ideology-item {
   padding: 40px;
 }
+
 .coun-num {
   font-weight: 600;
   width: 60px;
@@ -1000,12 +1154,17 @@ color: #fca20b;
   margin-top: -25px;
   margin-bottom: 40px;
   border: 2px solid #fff;
-  box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
-.ideo-step{ padding-bottom: 30px;}
-.single-ideology-item h4{
+
+.ideo-step {
+  padding-bottom: 30px;
+}
+
+.single-ideology-item h4 {
   margin-bottom: 40px;
 }
+
 /*
 ==============================
 CTR Area CSS
@@ -1033,7 +1192,8 @@ CTR Area CSS
   padding-left: 0;
 }
 
-.ctr-area .section-title::after, .ctr-area .section-title::before {
+.ctr-area .section-title::after,
+.ctr-area .section-title::before {
   display: none;
 }
 
@@ -1046,18 +1206,21 @@ CTR Area CSS
   margin-right: auto;
   margin-bottom: 25px;
 }
+
 .single-cate {
   width: 165px;
   display: inline-block;
   margin: 6px;
-    margin-bottom: 6px;
+  margin-bottom: 6px;
   border-radius: 5px;
   margin-bottom: 35px;
 }
+
 .single-cate:hover h4 {
   background: #fca20b;
   color: #fff;
 }
+
 .cate-img {
   display: block;
   width: 164px;
@@ -1065,69 +1228,109 @@ CTR Area CSS
   overflow: hidden;
   border-radius: 5px;
 }
-.single-cate:hover .cate-img{ box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);}
-.cate-img img{
+
+.single-cate:hover .cate-img {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.cate-img img {
 
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .single-cate h4 {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   line-height: 20px;
   position: relative;
   max-width: 90%;
   margin: -15px auto;
   padding: 5px;
   font-size: 14px;
-  border-radius: 2px; transition: 0.4s;
+  border-radius: 2px;
+  transition: 0.4s;
 }
 
 /****** curriculum area****/
-.curriculum-area{ position: relative;
+.curriculum-area {
+  position: relative;
 }
-.curriculum-area::before{
-  background-image: url(../img/curriculum-bg.png); background-repeat: no-repeat;
-  background-position: top left; z-index: -1; content: ''; position: absolute; width: 40%; right: 0; top: 0; bottom: 0;
+
+.curriculum-area::before {
+  background-image: url(../img/curriculum-bg.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 40%;
+  right: 0;
+  top: 0;
+  bottom: 0;
 
 }
+
 .curr-item {
   padding: 40px;
   background: #ddd;
 }
-.curr-item h2{ margin-bottom: 20px;}
-.curr-item.yellow-bg{ background: #fdf9ba; padding-right: 50px;}
-.curr-item.blue-bg{background: #e4fdf6; margin-left: -50px; z-index: 2;
-  margin-top: 60px; box-shadow: 0 3px 16px 3px rgba(0,0,0,0.2);}
-  .curr-btn{ margin-top: -30px;}
+
+.curr-item h2 {
+  margin-bottom: 20px;
+}
+
+.curr-item.yellow-bg {
+  background: #fdf9ba;
+  padding-right: 50px;
+}
+
+.curr-item.blue-bg {
+  background: #e4fdf6;
+  margin-left: -50px;
+  z-index: 2;
+  margin-top: 60px;
+  box-shadow: 0 3px 16px 3px rgba(0, 0, 0, 0.2);
+}
+
+.curr-btn {
+  margin-top: -30px;
+}
+
 /*
 ==============================
 Books Slider Area CSS
 ==============================
 */
-.books-slider.owl-theme .owl-nav [class*="owl-"]{
+.books-slider.owl-theme .owl-nav [class*="owl-"] {
   top: 30%;
 }
+
 .single-book .pic {
   height: 200px;
   max-width: 200px;
   margin: auto;
   overflow: hidden;
 }
-.single-book .pic img{
-  width: 100%; height: 100%; object-fit: cover;
+
+.single-book .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .single-book .title {
   font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; line-height: 25px;
+  white-space: nowrap;
+  line-height: 25px;
 }
 
 .single-book .book-info {
   padding: 15px 0;
 }
+
 .single-book .book-info .price {
   color: #FCA20B;
   font-weight: 600;
@@ -1135,6 +1338,7 @@ Books Slider Area CSS
   margin-top: 5px;
   display: block;
 }
+
 /*
 ==============================
 Fun Facts Area CSS
@@ -1196,7 +1400,7 @@ Team Area CSS
 .our-team {
   text-align: center;
   position: relative;
-   max-width: 270px;
+  max-width: 270px;
   margin: 0 auto 50px;
 }
 
@@ -1212,10 +1416,18 @@ Team Area CSS
   -webkit-transition: .4s;
   transition: .4s;
 }
-.our-team .pic{
-width: 100%; height: 350px;
+
+.our-team .pic {
+  width: 100%;
+  height: 350px;
 }
-.our-team .pic img{ width: 100%; height: 100%; object-fit: cover;}
+
+.our-team .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .our-team .team-content .title {
   font-size: 20px;
   font-weight: 600;
@@ -1263,7 +1475,7 @@ width: 100%; height: 350px;
   top: 50%;
   margin-top: -50px;
   -webkit-transform: translateY(-35px);
-          transform: translateY(-35px);
+  transform: translateY(-35px);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -1293,7 +1505,7 @@ width: 100%; height: 350px;
 
 .our-team:hover .social ul {
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 /*
@@ -1310,7 +1522,7 @@ How We Work CSS
 
 .single-how-work {
   -webkit-box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
-          box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
+  box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
   background: #ffffff;
   padding: 35px;
   border-radius: 5px;
@@ -1320,7 +1532,7 @@ How We Work CSS
 
 .single-how-work:hover {
   -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .single-how-work h3 {
@@ -1341,7 +1553,8 @@ Services Area CSS
 ==============================
 */
 .services-area {
-  padding-bottom: 50px; background: url(../img/service-bg.jpg) repeat;
+  padding-bottom: 50px;
+  background: url(../img/service-bg.jpg) repeat;
 }
 
 .services-area .single-box {
@@ -1358,9 +1571,9 @@ Services Area CSS
 
 .single-services:hover {
   -webkit-box-shadow: unset;
-          box-shadow: unset;
+  box-shadow: unset;
   -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .single-services::before {
@@ -1392,74 +1605,83 @@ Services Area CSS
   margin: auto;
   padding: 45px;
 }
+
 @-webkit-keyframes rotateme {
   0% {
-      -webkit-transform: rotate(0deg);
-      opacity: 1;
-    }
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
 
   50% {
-      -webkit-transform: rotate(180deg);
-      opacity: 0.7;
-    }
+    -webkit-transform: rotate(180deg);
+    opacity: 0.7;
+  }
+
   100% {
-      -webkit-transform: rotate(360deg);
-      opacity: 1;
-    }
+    -webkit-transform: rotate(360deg);
+    opacity: 1;
+  }
 }
+
 @-moz-keyframes rotateme {
   0% {
-      -moz-transform: rotate(0deg);
-      opacity: 1;
-    }
+    -moz-transform: rotate(0deg);
+    opacity: 1;
+  }
 
   50% {
-      -moz-transform: rotate(180deg);
-      opacity: 0.7;
-    }
+    -moz-transform: rotate(180deg);
+    opacity: 0.7;
+  }
+
   100% {
-      -moz-transform: rotate(360deg);
-      opacity: 1;
-    }
+    -moz-transform: rotate(360deg);
+    opacity: 1;
+  }
 }
+
 @-o-keyframes rotateme {
   0% {
-      -o-transform: rotate(0deg);
-      opacity: 1;
-    }
+    -o-transform: rotate(0deg);
+    opacity: 1;
+  }
 
   50% {
-      -o-transform: rotate(180deg);
-      opacity: 0.7;
-    }
+    -o-transform: rotate(180deg);
+    opacity: 0.7;
+  }
+
   100% {
-      -o-transform: rotate(360deg);
-      opacity: 1;
-    }
+    -o-transform: rotate(360deg);
+    opacity: 1;
+  }
 }
 
 @keyframes rotateme {
 
-   0% {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 
   50% {
-      transform: rotate(180deg);
-    }
+    transform: rotate(180deg);
+  }
+
   100% {
-      transform: rotate(360deg);
-      opacity: 1;
-    }
+    transform: rotate(360deg);
+    opacity: 1;
+  }
 }
+
 .services-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.2);
 }
+
 .single-services .services-img .icon {
   position: absolute;
   top: 50%;
@@ -1495,14 +1717,20 @@ Services Area CSS
   font-weight: 500;
   margin-bottom: 18px;
 }
+
 .single-services.sec-ser {
   padding-top: 70px;
 }
+
 .services-text {
   padding: 40px;
   text-align: justify;
 }
-.services-text h3{ margin-bottom: 20px;}
+
+.services-text h3 {
+  margin-bottom: 20px;
+}
+
 /*
 ==============================
 Why We Are Different CSS
@@ -1516,27 +1744,27 @@ Why We Are Different CSS
   display: none;
 }
 
-.tabset input:first-child:checked ~ .tab-panels .tab-panel:first-child {
+.tabset input:first-child:checked~.tab-panels .tab-panel:first-child {
   display: block;
 }
 
-.tabset input:nth-child(3):checked ~ .tab-panels .tab-panel:nth-child(2) {
+.tabset input:nth-child(3):checked~.tab-panels .tab-panel:nth-child(2) {
   display: block;
 }
 
-.tabset input:nth-child(5):checked ~ .tab-panels .tab-panel:nth-child(3) {
+.tabset input:nth-child(5):checked~.tab-panels .tab-panel:nth-child(3) {
   display: block;
 }
 
-.tabset input:nth-child(7):checked ~ .tab-panels .tab-panel:nth-child(4) {
+.tabset input:nth-child(7):checked~.tab-panels .tab-panel:nth-child(4) {
   display: block;
 }
 
-.tabset input:nth-child(9):checked ~ .tab-panels .tab-panel:nth-child(5) {
+.tabset input:nth-child(9):checked~.tab-panels .tab-panel:nth-child(5) {
   display: block;
 }
 
-.tabset input:nth-child(11):checked ~ .tab-panels .tab-panel:nth-child(6) {
+.tabset input:nth-child(11):checked~.tab-panels .tab-panel:nth-child(6) {
   display: block;
 }
 
@@ -1555,7 +1783,7 @@ Why We Are Different CSS
   font-size: 18px;
 }
 
-.tabset input:checked + label {
+.tabset input:checked+label {
   border-color: #fca20b;
   background: #fca20b;
   color: #ffffff;
@@ -1608,7 +1836,7 @@ Work Area CSS
 .shorting-menu {
   display: inline-block;
   -webkit-box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
-          box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
+  box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
   padding: 18px 20px;
   border-radius: 50px;
 }
@@ -1626,7 +1854,8 @@ Work Area CSS
   color: #000000;
 }
 
-.shorting-menu .filter.active, .shorting-menu .filter:hover {
+.shorting-menu .filter.active,
+.shorting-menu .filter:hover {
   background: #fca20b;
   color: #ffffff;
 }
@@ -1743,11 +1972,13 @@ Shop page CSS
   font-size: 18px;
   margin: 20px 0 10px;
 }
+
 .filters-div label {
   color: #555;
   font-weight: 400;
   font-size: 14px;
 }
+
 .sidebar {
   height: 100%;
   width: 0;
@@ -1794,12 +2025,19 @@ Shop page CSS
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
 }
+
 .bookory-sorting {
   margin-bottom: 30px;
 }
+
 .bookory-sorting {
   margin-bottom: 30px;
   display: flex;
@@ -1808,6 +2046,7 @@ Shop page CSS
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
 }
+
 .filter-toggle {
   display: inline-block;
   align-items: center;
@@ -1820,14 +2059,18 @@ Shop page CSS
   font-weight: 600;
   color: var(--accent);
 }
+
 .gridlist-toggle {
   display: inline-flex;
   margin-right: auto;
   margin-left: -4px;
 }
-.gridlist-toggle a.active, .gridlist-toggle a:hover {
+
+.gridlist-toggle a.active,
+.gridlist-toggle a:hover {
   color: var(--accent);
 }
+
 .gridlist-toggle a {
   font-size: 12px;
   display: inline-block;
@@ -1835,6 +2078,7 @@ Shop page CSS
   padding: 4px;
   line-height: 0;
 }
+
 .bookory-sorting .woocommerce-ordering {
   position: relative;
   margin-left: auto;
@@ -1856,6 +2100,7 @@ select:not([size]):not([multiple]) {
   background-size: 16px 12px;
   border-radius: 0;
 }
+
 .bookory-sorting .woocommerce-ordering select {
   font-size: 12px;
   line-height: 24px;
@@ -1877,6 +2122,7 @@ select:not([size]):not([multiple]) {
   display: flex;
   align-items: center;
 }
+
 .bookory-products-per-page select:not([size]):not([multiple]) {
   margin-left: 3px;
   padding: 0 18px 0 0;
@@ -1887,6 +2133,7 @@ select:not([size]):not([multiple]) {
   color: var(--accent);
   background-color: var(--background);
 }
+
 .cant-find-what-div {
   background: #f6f6f6;
   border-radius: 5px;
@@ -1895,6 +2142,7 @@ select:not([size]):not([multiple]) {
   padding: 0 3% 50px;
   margin: 10% 0;
 }
+
 .my-cant-find-what-title {
   display: inline-block;
   font-size: 30px !important;
@@ -1904,13 +2152,15 @@ select:not([size]):not([multiple]) {
   margin: 40px 0 30px 1% !important;
   width: 100%;
   padding-bottom: 0;
-  font-family: playfair display,serif !important;
+  font-family: playfair display, serif !important;
   line-height: 35px;
 }
+
 .filters-div {
   background: #f7f7f7;
   padding: 15px;
 }
+
 .books-listing .single-book .pic {
   height: 240px;
   max-width: 200px;
@@ -1918,23 +2168,31 @@ select:not([size]):not([multiple]) {
   overflow: hidden;
   background: #f2f2f2;
 }
+
 .books-listing .single-book {
   margin-bottom: 20px;
 }
+
 .books-listing .single-book .price {
-  font-size: 14px; color: #262626;
+  font-size: 14px;
+  color: #262626;
   line-height: 25px;
   font-weight: 700;
 }
+
 .books-listing .single-book .price-new {
   position: relative;
-display: inline-block;}
+  display: inline-block;
+}
+
 .books-listing .single-book .price-old {
   color: #d22129;
   text-decoration: line-through;
   margin-left: 5px;
-display: inline-block;  font-size: 12px;
+  display: inline-block;
+  font-size: 12px;
 }
+
 .books-listing .author {
   color: #383838;
   font-size: 13px;
@@ -1947,7 +2205,11 @@ display: inline-block;  font-size: 12px;
   line-height: 18px;
   width: calc(100% - 45px);
 }
-.books-listing .single-book .pic img{ object-fit: contain;}
+
+.books-listing .single-book .pic img {
+  object-fit: contain;
+}
+
 /*
 ==============================
 FAQ Area CSS
@@ -1968,7 +2230,7 @@ FAQ Area CSS
   margin-bottom: 6px;
   border: none;
   -webkit-box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
-          box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
+  box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
 }
 
 .card .card-header {
@@ -2040,7 +2302,7 @@ Testimonials Area CSS
 
 .single-feedback {
   -webkit-box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
-          box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
+  box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
   background-image: url(../img/patt.png);
   padding: 30px;
   margin-bottom: 30px;
@@ -2101,11 +2363,12 @@ Testimonials Area CSS
 
 .single-feedback:hover {
   -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+  transform: translateX(5px);
   background: #fca20b;
 }
 
-.single-feedback:hover .client-title h4, .single-feedback:hover .client-title h5 {
+.single-feedback:hover .client-title h4,
+.single-feedback:hover .client-title h5 {
   color: #ffffff;
 }
 
@@ -2131,9 +2394,10 @@ Blog Area CSS
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
   border-radius: 20px;
 }
+
 .single-blog-item span {
   position: absolute !important;
   margin-top: -30px;
@@ -2143,6 +2407,7 @@ Blog Area CSS
   font-size: 10px;
   border-radius: 0 8px 8px 0;
 }
+
 .bot-pagination .page-link {
   width: 50px;
   height: 50px;
@@ -2154,6 +2419,7 @@ Blog Area CSS
   color: #666;
   border: 1px solid #666;
 }
+
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
@@ -2172,7 +2438,9 @@ Blog Area CSS
   transition: .4s;
 }
 
-.single-blog-item span, .single-blog-item p, .single-blog-item h4 {
+.single-blog-item span,
+.single-blog-item p,
+.single-blog-item h4 {
   position: relative;
   -webkit-transition: .4s;
   transition: .4s;
@@ -2199,7 +2467,7 @@ Blog Area CSS
   line-height: 44px;
   text-align: center;
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 27, 103, 0.3);
-          box-shadow: 0px 0px 25px 0px rgba(0, 27, 103, 0.3);
+  box-shadow: 0px 0px 25px 0px rgba(0, 27, 103, 0.3);
   border-radius: 50% 0 0 0;
 }
 
@@ -2208,7 +2476,9 @@ Blog Area CSS
   opacity: .66;
 }
 
-.single-blog-item:hover span, .single-blog-item:hover p, .single-blog-item:hover h4 a {
+.single-blog-item:hover span,
+.single-blog-item:hover p,
+.single-blog-item:hover h4 a {
   color: #ffffff;
 }
 
@@ -2240,6 +2510,7 @@ Subscribe Area CSS
   background-color: #2d7a7d;
   position: relative;
 }
+
 .subscribe-area::before {
   content: '';
   background: url(../img/newsletter-bg.jpg);
@@ -2251,13 +2522,18 @@ Subscribe Area CSS
   right: 0;
   background-repeat: no-repeat;
 }
-.subscribe-area:after{
+
+.subscribe-area:after {
   content: '';
   background: url(../img/newsletter-top.png);
   width: 100%;
   height: 200px;
-  background-size: cover; position: absolute; top: 0; background-position: bottom center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  background-position: bottom center;
 }
+
 .newsletter {
   max-width: 750px;
   margin-left: auto;
@@ -2272,20 +2548,25 @@ Subscribe Area CSS
   color: #fff;
   font-size: 30px;
 }
-.newsletter p{ color: #fff;}
+
+.newsletter p {
+  color: #fff;
+}
+
 .newsletter form {
   position: relative;
 }
 
 .newsletter form .form-control {
   -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   border: none;
   height: 60px;
   border-radius: 50px;
   padding-left: 20px;
   font-size: 15px;
 }
+
 .newsletter form .btn {
   position: absolute;
   right: 7px;
@@ -2316,7 +2597,7 @@ Contact Area CSS
 
 .contact-info {
   -webkit-box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
-          box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
+  box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
   background: #ffffff;
   padding: 30px;
   border-top: 3px solid #fca20b;
@@ -2375,7 +2656,8 @@ Contact Area CSS
   border-radius: 50%;
 }
 
-.contact-info .follow-us li a:hover, .contact-info .follow-us li a:focus {
+.contact-info .follow-us li a:hover,
+.contact-info .follow-us li a:focus {
   background: #fca20b;
   color: #ffffff;
   border-color: #fca20b;
@@ -2383,7 +2665,7 @@ Contact Area CSS
 
 .contact-form {
   -webkit-box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
-          box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
+  box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
   padding: 40px 30px;
   border-top: 3px solid #fca20b;
   border-bottom: 3px solid #fca20b;
@@ -2491,7 +2773,7 @@ Blog Details Area CSS
 
 .blog-details {
   -webkit-box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
-          box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
+  box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
   background: #ffffff;
 }
 
@@ -2619,7 +2901,7 @@ Blog Details Area CSS
 
 .post-controls-buttons div a {
   -webkit-box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
-          box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
+  box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
   padding: 10px 20px;
   border-radius: 5px;
   background: #ffffff;
@@ -2638,7 +2920,7 @@ Blog Details Area CSS
 
 .post-comments .single-comment {
   -webkit-box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
-          box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
+  box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
   padding: 25px;
   margin-bottom: 25px;
   position: relative;
@@ -2686,7 +2968,7 @@ Blog Details Area CSS
 
 .leave-a-reply {
   -webkit-box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
-          box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
+  box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
   padding: 25px;
   background: #ffffff;
   margin-top: 50px;

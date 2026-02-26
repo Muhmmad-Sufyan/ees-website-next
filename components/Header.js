@@ -56,6 +56,7 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent" ref={collapseRef}>
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item"><Link className={`nav-link ${pathname == '/' ? 'active' : ''}`} href="/" onClick={handleNavLinkClick}>Home</Link></li>
+                <li className="nav-item"><Link className={`nav-link ${pathname == '/about' ? 'active' : ''}`} href="/about" onClick={handleNavLinkClick}>About Us</Link></li>
                 <li className="nav-item"><Link className={`nav-link ${pathname == '/diagnosis' ? 'active' : ''}`} href="/diagnosis" onClick={handleNavLinkClick}>Diagnosis</Link></li>
                 <li className="nav-item"><Link className={`nav-link ${pathname == '/ideology' ? 'active' : ''}`} href="/ideology" onClick={handleNavLinkClick}>Ideology</Link></li>
                 <li className="nav-item"><Link className={`nav-link ${pathname == '/services' ? 'active' : ''}`} href="/services" onClick={handleNavLinkClick}>Services</Link></li>
