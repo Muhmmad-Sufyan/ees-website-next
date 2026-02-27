@@ -31,11 +31,13 @@ export default function About() {
 
   return (
     <>
-      <PageHeader
-        className="about-ripple"
-        imageClass="about-image"
-        title="About Us"
-      />
+      <div className="bg-color">
+        <PageHeader
+          className="about-ripple"
+          imageClass="about-image"
+          title="About Us"
+        />
+      </div>
       <WelcomeSection OwlCarousel={OwlCarousel} daily_quotes={daily_quotes} />
       <WhatDrivesUs OwlCarousel={OwlCarousel} />
       <AboutContent />

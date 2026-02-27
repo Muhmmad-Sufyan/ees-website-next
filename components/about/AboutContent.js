@@ -6,18 +6,16 @@ import Link from "next/link";
 export default function AboutContent() {
   return (
     <>
-      {/* Founders & Leadership Section */}
       <section className="founders-section ptb-80">
         <div className="container">
-          <div className="section-title text-center">
+          <div className="founder-title text-center">
             <span className="founders-subtitle">VISIONARY LEADERSHIP</span>
             <h2>
-              <span>Founders</span> &amp; Leadership Message
+              Founders <span className="spa">&amp; Leadership Message</span>
             </h2>
           </div>
 
           <div className="row justify-content-center">
-            {/* Founder Card 1 */}
             <div
               className="col-lg-5 col-md-6"
               data-aos="fade-right"
@@ -55,8 +53,6 @@ export default function AboutContent() {
                 </div>
               </div>
             </div>
-
-            {/* Founder Card 2 */}
             <div
               className="col-lg-5 col-md-6"
               data-aos="fade-left"
@@ -98,7 +94,6 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="about-cta-section ptb-80">
         <div className="container">
           <div className="text-center">

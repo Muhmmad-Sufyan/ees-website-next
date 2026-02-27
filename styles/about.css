@@ -1,9 +1,73 @@
 /* About Page Header */
+
+.founder-title {
+  margin-bottom: 30px;
+  padding-left: 30px;
+  position: relative;
+}
+.spa {
+  font-weight: 300;
+  color: #1A3B3D;
+}
+
+.founder-title::after {
+  left: 0;
+  height: 50%;
+}
+
+.founder-title:hover::before {
+  height: 50%;
+}
+
+.founder-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -21px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;          /* border width */
+  height: 3px;          /* border thickness */
+  background-color: #fca20b; /* same color */
+}
+
+.founder-title:hover::after {
+  height: 100%;
+}
+
+.founder-title h2 {
+  font-size: 35px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  color: #fca20b ;
+}
+
+.founder-title h2 {
+  color: #fca20b;
+  font-weight: 600;
+}
+
+.founder-title p {
+  margin-top: -7px;
+}
+
+.founder-title h4 {
+  font-size: 18px;
+  font-weight: 300;
+  color: #fca20b;
+  margin-bottom: 17px;
+  text-transform: capitalize;
+}
+
+.bg-color {
+    background-color: rgb(7 81 84);
+}
+
 .about-image {
     background-image: url(/assets/img/banner-images/about.png);
     background-size: 344px auto !important;
+    width: 100%;
     background-repeat: no-repeat !important;
-    background-position: bottom right 150px !important;
+    background-position: top 33px right 150px !important;
 }
 
 .page-title.about-image {
@@ -12,15 +76,12 @@
 
 .page-title.about-image:before {
     background: none;
-    opacity: 1;
-    background-image: linear-gradient(to right, rgb(7 81 84), rgba(7, 81, 84, 0.699));
 }
 
 .about-ripple canvas {
     z-index: 1 !important;
 }
 
-/* Founders Section */
 .founders-section {
     background-color: #f9f9f9;
 }
@@ -33,16 +94,6 @@
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 10px;
-}
-
-.founders-section .section-title h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1d1d1d;
-}
-
-.founders-section .section-title h2 span {
-    color: #fca20b;
 }
 
 .founder-card {
@@ -189,7 +240,7 @@
         font-size: 28px;
     }
 
-    .founders-section .section-title h2 {
+    .founders-section .founder-title h2 {
         font-size: 28px;
     }
 
