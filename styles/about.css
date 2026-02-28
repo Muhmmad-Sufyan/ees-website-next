@@ -1,61 +1,67 @@
 /* About Page Header */
-
-.founder-title {
-  margin-bottom: 30px;
-  padding-left: 30px;
-  position: relative;
+.main-div{
+    overflow-x: hidden;
 }
+.founder-title {
+    margin-bottom: 30px;
+    padding-left: 30px;
+    position: relative;
+}
+
 .spa {
-  font-weight: 300;
-  color: #1A3B3D;
+    font-weight: 300;
+    color: #1A3B3D;
 }
 
 .founder-title::after {
-  left: 0;
-  height: 50%;
+    left: 0;
+    height: 50%;
 }
 
 .founder-title:hover::before {
-  height: 50%;
+    height: 50%;
 }
 
 .founder-title h2::after {
-  content: "";
-  position: absolute;
-  bottom: -21px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 64px;          /* border width */
-  height: 3px;          /* border thickness */
-  background-color: #fca20b; /* same color */
+    content: "";
+    position: absolute;
+    bottom: -21px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    /* border width */
+    height: 3px;
+    /* border thickness */
+    background-color: #fca20b;
+    /* same color */
 }
 
 .founder-title:hover::after {
-  height: 100%;
+    height: 100%;
 }
 
 .founder-title h2 {
-  font-size: 35px;
-  font-weight: 200;
-  margin-bottom: 20px;
-  color: #fca20b ;
+    font-size: 35px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: #fca20b;
 }
 
 .founder-title h2 {
-  color: #fca20b;
-  font-weight: 600;
+    color: #fca20b;
+    font-weight: 600;
 }
 
 .founder-title p {
-  margin-top: -7px;
+    margin-top: -7px;
 }
 
 .founder-title h4 {
-  font-size: 18px;
-  font-weight: 300;
-  color: #fca20b;
-  margin-bottom: 17px;
-  text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fca20b;
+    margin-bottom: 17px;
+    text-transform: capitalize;
 }
 
 .bg-color {
@@ -238,6 +244,11 @@
 @media only screen and (max-width: 767px) {
     .cta-heading {
         font-size: 28px;
+    }
+
+    .about-image {
+        background-size: 200px auto !important;
+        background-position: top 40px right 0px !important;
     }
 
     .founders-section .founder-title h2 {

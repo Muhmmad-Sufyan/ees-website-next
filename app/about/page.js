@@ -30,7 +30,7 @@ export default function About() {
     .slice(0, 4);
 
   return (
-    <>
+    <div className="main-div">
       <div className="bg-color">
         <PageHeader
           className="about-ripple"
@@ -41,6 +41,6 @@ export default function About() {
       <WelcomeSection OwlCarousel={OwlCarousel} daily_quotes={daily_quotes} />
       <WhatDrivesUs OwlCarousel={OwlCarousel} />
       <AboutContent />
-    </>
+    </div>
   );
 }

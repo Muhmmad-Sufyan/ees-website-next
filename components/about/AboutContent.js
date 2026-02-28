@@ -106,7 +106,7 @@ export default function AboutContent() {
               share our passion for knowledge.
             </p>
             <div className="cta-buttons">
-              <Link href="/resources" className="btn btn-primary">
+              <Link href="/resources" className="btn btn-primary" style={{minWidth:'200px'}}>
                 READ MORE
               </Link>
               <Link href="/contact" className="btn btn-black-outlined">

@@ -13,13 +13,15 @@ export default function Research() {
   }, []);
 
   return (
-    <>
+    <div className="main-div">
+    <div className="bg-color">
       <PageHeader
         className="research-ripple"
         imageClass="research-image"
         title="Research & Publications"
       />
+      </div>
       <ResearchContent />
-    </>
+    </div>
   );
 }

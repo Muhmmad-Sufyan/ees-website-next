@@ -10,8 +10,8 @@ export default function ResearchContent() {
         <div className="container">
           <div className="text-center" data-aos="fade-down" data-aos-duration="1000">
             <span className="research-subtitle">Project 01</span>
-            <div className="section-title">
-              <h2>EHYA <span>PUBLICATIONS</span></h2>
+            <div className="project-title">
+              <h2>EHYA PUBLICATIONS</h2>
             </div>
             <p className="publications-desc">
               Bridging the gap between theoretical research and practical educational application through
@@ -24,8 +24,9 @@ export default function ResearchContent() {
             <div className="col-lg-6 col-md-6" data-aos="fade-right" data-aos-duration="1000">
               <div className="publication-card">
                 <div className="publication-card-img" style={{ background: '#dce8e8' }}>
-                  <div className="pub-icon">
-                    <i className="fa fa-check-circle"></i>
+                  <div className="pub-icon"><i className="fa fa-graduation-cap cap-icon"></i>
+
+
                   </div>
                   <img src="/assets/img/banner-images/banner-2.png" alt="Advanced Textbooks" />
                 </div>
