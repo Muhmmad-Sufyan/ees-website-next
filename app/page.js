@@ -4,9 +4,11 @@ import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import AOS from "aos";
 import "@/styles/home.css";
+import "@/styles/portfolio.css";
 import quotes from "@/data/quotes.json";
 
-import HeroCarousel from "@/components/home/HeroCarousel";
+// import HeroCarousel from "@/components/home/HeroCarousel";
+import PortfolioSection from "@/components/home/PortfolioSection";
 import WelcomeSection from "@/components/home/WelcomeSection";
 import WhatDrivesUs from "@/components/home/WhatDrivesUs";
 import DiagnosisPreview from "@/components/home/DiagnosisPreview";
@@ -32,13 +34,14 @@ function Home() {
     .map((a) => a.x)
     .slice(0, 4);
 
-  const handleNewCollectionClick = () => {
-    document.getElementById("new-collection").scrollIntoView();
-  };
+  // const handleNewCollectionClick = () => {
+  //   document.getElementById("new-collection").scrollIntoView();
+  // };
 
   return (
     <>
-      <HeroCarousel OwlCarousel={OwlCarousel} handleNewCollectionClick={handleNewCollectionClick} />
+      {/* <HeroCarousel OwlCarousel={OwlCarousel} handleNewCollectionClick={handleNewCollectionClick} /> */}
+      <PortfolioSection />
       <WelcomeSection OwlCarousel={OwlCarousel} daily_quotes={daily_quotes} />
       <WhatDrivesUs OwlCarousel={OwlCarousel} />
       <section className="books-w"></section>

@@ -679,8 +679,15 @@
         justify-content: center;
     }
 }
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+    .research-image {
+        background-size: 300px auto !important;
+        background-position: top 70px right 50px !important;
+    } 
+}
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
     .journal-badges {
         flex-direction: column;
     }
@@ -688,6 +695,11 @@
     .journal-badge {
         justify-content: center;
     }
+     .research-image {
+        background-size: 200px auto !important;
+        background-position: top 40px right 0px !important;
+    }
+
 
     .publication-card-body h3 {
         font-size: 18px;

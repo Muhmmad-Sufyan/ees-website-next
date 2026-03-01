@@ -72,7 +72,7 @@
     background-image: url(/assets/img/banner-images/about.png);
     background-size: 344px auto !important;
     width: 100%;
-    background-repeat: no-repeat !important;
+    background-repeat: no-repeat ;
     background-position: top 33px right 150px !important;
 }
 
@@ -241,6 +241,12 @@
 }
 
 /* Responsive */
+@media only screen and (max-width: 1024px) {
+    .about-image {
+        background-size: 300px auto !important;
+        background-position: top 70px right 50px !important;
+    } 
+}
 @media only screen and (max-width: 767px) {
     .cta-heading {
         font-size: 28px;
