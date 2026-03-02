@@ -5,7 +5,7 @@
 .portfolio-section {
   padding: 100px 0;
   background: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .portfolio-header {
@@ -283,7 +283,9 @@
   }
 
   .portfolio-tab-list {
-    flex-direction: row;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
     overflow-x: auto;
     gap: 10px;
     padding-bottom: 5px;
@@ -297,7 +299,7 @@
 
   .portfolio-tab-item {
     flex: 0 0 auto;
-    min-width: 200px;
+    max-width: 300px;
     padding: 12px 16px;
   }
 
