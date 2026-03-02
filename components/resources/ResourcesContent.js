@@ -195,10 +195,13 @@ export default function ResourcesContent() {
                 <div className="res-material-card">
                   <div className="res-material-card__icon">
                     <div className="res-material-card__icon-circle">
-                    <span className="down-icon">
-                      <img src="/assets/img/svgicon/dowloadesvg.svg" alt="dsfasdf"/>
-                    </span>
-                    <img src={material.image} alt={material.title} />
+                      <span className="down-icon">
+                        <img
+                          src="/assets/img/svgicon/dowloadesvg.svg"
+                          alt="icons"
+                        />
+                      </span>
+                      <img className="mainImg" src={material.image} alt={material.title} />
                     </div>
                   </div>
                   <div className="res-material-card__info">
@@ -303,19 +306,21 @@ export default function ResourcesContent() {
             {curriculumResources.map((book, index) => (
               <div className="res-curriculum-card" key={index}>
                 <div
-                  className="res-curriculum-card__cover"
+                  className="res-curriculum-card__thumb"
                   style={{ backgroundColor: book.color, color: book.textColor }}
                 >
-                  <span className="res-curriculum-card__subject">
-                    {book.subject}
-                  </span>
-                  <div>
-                    <h4>{book.title}</h4>
-                    <span className="res-curriculum-card__subtitle">
-                      {book.subtitle}
+                  <div className="res-curriculum-card__cover" style={{border:'5px solid #FFFFFF0D'}}>
+                    <span className="res-curriculum-card__subject">
+                      {book.subject}
                     </span>
-                  </div>  
-                  <div className="res-curriculum-card__line"></div>
+                    <div>
+                      <h4>{book.title}</h4>
+                      <span className="res-curriculum-card__subtitle">
+                        {book.subtitle}
+                      </span>
+                    </div>
+                    <div className="res-curriculum-card__line"></div>
+                  </div>
                 </div>
                 <div className="res-curriculum-card__info">
                   <h5>{book.bookTitle}</h5>
