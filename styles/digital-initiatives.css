@@ -1,0 +1,1010 @@
+/* ===== Page Header ===== */
+.di-image {
+  background: linear-gradient(135deg, #0d7377 0%, #0a5c5f 50%, #074e51 100%);
+}
+.page-title.di-image {
+  background-attachment: inherit;
+}
+.page-title.di-image:before {
+  background: none;
+  opacity: 1;
+}
+.di-ripple canvas {
+  z-index: 1 !important;
+}
+
+/* ===== Shared Styles ===== */
+.di-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.di-label--red {
+  color: #e74c3c;
+}
+.di-label--gold {
+  color: #e8a020;
+}
+
+.di-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.di-btn--primary {
+  background: #e74c3c;
+  color: #fff;
+  border-color: #e74c3c;
+}
+.di-btn--primary:hover {
+  background: #c0392b;
+  border-color: #c0392b;
+  color: #fff;
+}
+.di-btn--outline {
+  background: transparent;
+  color: #333;
+  border-color: #ccc;
+}
+.di-btn--outline:hover {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+.di-btn--outline i {
+  margin-right: 6px;
+}
+
+.di-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+}
+.di-check-list li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+.di-check-list li i {
+  color: #27ae60;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.di-view-all {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e8a020;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+.di-view-all:hover {
+  color: #c4841a;
+}
+.di-view-all i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+/* ===== AlifLaila Section ===== */
+.di-aliflaila {
+  padding: 70px 0 80px;
+  background: #fff;
+}
+.di-aliflaila__title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #1a1a2e;
+  margin: 0 0 30px;
+}
+.di-aliflaila__title span {
+  font-weight: 700;
+  color: #0d7377;
+}
+
+/* Language Tabs */
+.di-lang-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.di-lang-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.di-lang-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: background 0.3s;
+}
+.di-lang-tab:hover {
+  border-color: #0d7377;
+  color: #0d7377;
+}
+.di-lang-tab:hover .di-lang-dot {
+  background: #0d7377;
+}
+.di-lang-tab--active {
+  background: #0d7377;
+  border-color: #0d7377;
+  color: #fff;
+}
+.di-lang-tab--active .di-lang-dot {
+  background: #fff;
+}
+.di-lang-tab--active:hover {
+  color: #fff;
+}
+.di-lang-tab--active:hover .di-lang-dot {
+  background: #fff;
+}
+
+/* AlifLaila Content */
+.di-aliflaila__content {
+  margin-top: 10px;
+}
+
+/* Placeholder Image */
+.di-aliflaila__placeholder {
+  background: linear-gradient(145deg, #e8f4f4 0%, #d4e8e4 100%);
+  border-radius: 24px;
+  padding: 40px;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(13, 115, 119, 0.12);
+}
+.di-aliflaila__placeholder::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(13, 115, 119, 0.08);
+}
+.di-aliflaila__placeholder::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(231, 76, 60, 0.08);
+}
+.di-aliflaila__placeholder-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.di-placeholder-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.di-aliflaila__placeholder-kids {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.di-kid {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.di-kid--1 {
+  background: linear-gradient(135deg, #f39c12, #e74c3c);
+}
+.di-kid--2 {
+  background: linear-gradient(135deg, #27ae60, #2980b9);
+}
+.di-aliflaila__placeholder-inner p {
+  font-size: 14px;
+  color: #0d7377;
+  font-weight: 600;
+  margin: 0;
+}
+
+.di-aliflaila__info {
+  padding-left: 30px;
+}
+.di-aliflaila__stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.di-aliflaila__logo-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #fef5e7;
+  border-radius: 12px;
+}
+.di-aliflaila__logo-placeholder img {
+  width: 28px;
+  height: 28px;
+}
+.di-aliflaila__logo-placeholder span {
+  font-size: 16px;
+  font-weight: 800;
+  color: #b8860b;
+  font-style: italic;
+}
+.di-aliflaila__stat h3 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0;
+  line-height: 1;
+}
+.di-aliflaila__stat span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #888;
+}
+.di-aliflaila__info p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ===== Ehya Classmate Section ===== */
+.di-classmate {
+  padding: 80px 0;
+  background: #f7f8fa;
+}
+.di-classmate__icon-wrap {
+  margin-bottom: 16px;
+}
+.di-classmate__award {
+  width: 36px;
+  height: 36px;
+}
+.di-classmate__title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+.di-classmate__title span {
+  font-weight: 800;
+  color: #0d7377;
+  font-size: 42px;
+}
+.di-classmate__desc {
+  font-size: 15px;
+  color: #666;
+  max-width: 550px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+}
+
+/* Subject Tags */
+.di-subject-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+.di-subject-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  transition: all 0.3s;
+}
+.di-subject-tag:hover {
+  border-color: #e8a020;
+  box-shadow: 0 3px 12px rgba(232, 160, 32, 0.15);
+}
+.di-subject-tag i {
+  color: #e8a020;
+  font-size: 10px;
+}
+
+/* ===== Phone Mockups Section ===== */
+.di-mockups {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #f0f2f5 0%, #e8eaed 100%);
+}
+.di-mockups__wrap {
+  display: flex;
+  justify-content: center;
+}
+.di-mockups__phones {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.di-mockup-phone {
+  width: 300px;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.18);
+  background: #fff;
+  border: 4px solid #222;
+  position: relative;
+}
+.di-mockup-phone__notch {
+  width: 120px;
+  height: 24px;
+  background: #222;
+  border-radius: 0 0 16px 16px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.di-mockup-phone--right {
+  margin-top: 50px;
+}
+.di-mockup-phone__screen {
+  min-height: 460px;
+}
+.di-mockup-phone__header {
+  padding: 20px 20px 14px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.di-mockup-phone__header-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #27ae60;
+}
+.di-mockup-phone__header--dark {
+  background: #1a2a3a;
+  border-bottom: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.di-mockup-phone__small-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.di-mockup-phone__label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+.di-mockup-phone__header--dark .di-mockup-phone__label {
+  color: #fff;
+}
+.di-mockup-phone__body {
+  padding: 20px;
+}
+
+/* Chat Bubbles */
+.di-chat-bubble {
+  padding: 12px 16px;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  max-width: 85%;
+}
+.di-chat-bubble p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.di-chat-bubble--bot {
+  background: #f0f2f5;
+  color: #333;
+  border-bottom-left-radius: 4px;
+}
+.di-chat-bubble--user {
+  background: #0d7377;
+  color: #fff;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+.di-chat-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #f0f2f5;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+.di-chat-input span {
+  font-size: 13px;
+  color: #aaa;
+}
+.di-chat-input i {
+  color: #0d7377;
+  font-size: 16px;
+}
+
+/* Progress Items */
+.di-progress-item {
+  margin-bottom: 20px;
+}
+.di-progress-item__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.di-progress-item__top span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+.di-progress-item__pct {
+  color: #0d7377 !important;
+  font-weight: 700 !important;
+}
+.di-progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.di-progress-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0d7377, #27ae60);
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+.di-stats-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+.di-stat-box {
+  flex: 1;
+  padding: 16px 10px;
+  border-radius: 14px;
+  text-align: center;
+}
+.di-stat-box--blue {
+  background: #eef3ff;
+}
+.di-stat-box--green {
+  background: #eefaf0;
+}
+.di-stat-box--orange {
+  background: #fff8ee;
+}
+.di-stat-box__num {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a2e;
+}
+.di-stat-box__label {
+  display: block;
+  font-size: 11px;
+  color: #888;
+  margin-top: 3px;
+}
+
+/* Mini Chart */
+.di-mini-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 80px;
+  margin-top: 20px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+.di-mini-chart__bar {
+  flex: 1;
+  background: linear-gradient(0deg, #0d7377, #27ae60);
+  border-radius: 4px 4px 0 0;
+  min-height: 10px;
+  transition: height 0.5s ease;
+}
+
+/* ===== Excellence Section ===== */
+.di-excellence {
+  padding: 80px 0;
+  background: #fff;
+}
+.di-excellence__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 12px;
+}
+.di-excellence__desc {
+  font-size: 14px;
+  color: #888;
+  max-width: 480px;
+  margin: 0 auto 45px;
+  line-height: 1.7;
+}
+.di-feature-card {
+  text-align: center;
+  padding: 35px 22px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+}
+.di-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+.di-feature-card__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.di-feature-card__svg {
+  width: 28px;
+  height: 28px;
+}
+.di-feature-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 10px;
+}
+.di-feature-card p {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== Ehya Kids TV Section ===== */
+.di-kidstv {
+  padding: 80px 0 60px;
+  background: #f7f8fa;
+}
+.di-kidstv__logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.di-kidstv__logo-icon {
+  width: 40px;
+  height: 40px;
+}
+.di-kidstv__logo-badge {
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.di-kidstv__title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 14px;
+}
+.di-kidstv__stats-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.di-kidstv__stat-item {
+  font-size: 13px;
+  color: #555;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+}
+.di-kidstv__stat-item strong {
+  color: #1a1a2e;
+}
+.di-kidstv__stat-item i {
+  color: #888;
+  font-size: 12px;
+}
+.di-kidstv__info p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+.di-kidstv__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Featured Video */
+.di-kidstv__featured {
+  position: relative;
+}
+.di-kidstv__featured-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.di-kidstv__featured-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #888;
+  text-transform: uppercase;
+}
+.di-kidstv__featured-badge-top {
+  display: inline-block;
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.di-kidstv__featured-card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.di-kidstv__featured-placeholder {
+  width: 100%;
+  height: 320px;
+  background: linear-gradient(145deg, #27ae60 0%, #1a8a4a 40%, #145a32 100%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.di-kidstv__featured-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+}
+.di-kidstv__featured-placeholder i {
+  font-size: 56px;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+.di-kidstv__featured-placeholder:hover i {
+  transform: scale(1.1);
+}
+.di-kidstv__featured-placeholder span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+.di-kidstv__featured-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding: 0 4px;
+}
+.di-kidstv__featured-sub-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #888;
+}
+.di-kidstv__featured-sub-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+/* Recommended Videos */
+.di-recommended {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #e0e0e0;
+}
+.di-recommended__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.di-recommended__header h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+.di-recommended__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.di-recommended__card {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.di-recommended__card:hover {
+  transform: translateY(-5px);
+}
+.di-recommended__thumb {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.di-recommended__play {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.di-recommended__card:hover .di-recommended__play {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.di-recommended__play i {
+  font-size: 14px;
+  color: #e74c3c;
+  margin-left: 3px;
+}
+.di-recommended__info h5 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 4px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.di-recommended__info span {
+  font-size: 11px;
+  color: #888;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1199px) {
+  .di-recommended__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .di-recommended__card:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .di-aliflaila__title,
+  .di-classmate__title {
+    font-size: 28px;
+  }
+  .di-classmate__title span {
+    font-size: 32px;
+  }
+  .di-kidstv__title {
+    font-size: 28px;
+  }
+  .di-excellence__title {
+    font-size: 26px;
+  }
+  .di-mockup-phone {
+    width: 260px;
+  }
+  .di-mockup-phone__screen {
+    min-height: 380px;
+  }
+  .di-recommended__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .di-recommended__card:nth-child(5) {
+    display: block;
+  }
+  .di-aliflaila__info {
+    padding-left: 0;
+    margin-top: 35px;
+  }
+  .di-kidstv__featured {
+    margin-top: 35px;
+  }
+  .di-kidstv__featured-placeholder {
+    height: 260px;
+  }
+  .di-aliflaila__placeholder {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .di-aliflaila,
+  .di-classmate,
+  .di-mockups,
+  .di-excellence,
+  .di-kidstv {
+    padding: 50px 0;
+  }
+  .di-aliflaila__title {
+    font-size: 22px;
+  }
+  .di-classmate__title {
+    font-size: 22px;
+  }
+  .di-classmate__title span {
+    font-size: 26px;
+  }
+  .di-kidstv__title {
+    font-size: 22px;
+  }
+  .di-excellence__title {
+    font-size: 22px;
+  }
+  .di-mockup-phone {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 30px;
+  }
+  .di-mockups__phones {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .di-mockup-phone--right {
+    margin-top: 0;
+  }
+  .di-recommended__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .di-lang-tabs {
+    gap: 8px;
+  }
+  .di-lang-tab {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .di-btn {
+    padding: 10px 24px;
+    font-size: 12px;
+  }
+  .di-kidstv__actions {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .di-aliflaila__stat h3 {
+    font-size: 28px;
+  }
+  .di-subject-tags {
+    gap: 8px;
+  }
+  .di-subject-tag {
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+  .di-aliflaila__placeholder {
+    min-height: 260px;
+    padding: 30px;
+  }
+  .di-placeholder-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .di-kidstv__featured-placeholder {
+    height: 220px;
+  }
+  .di-kidstv__featured-placeholder i {
+    font-size: 40px;
+  }
+  .di-recommended {
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+  .di-aliflaila__stats {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .di-recommended__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .di-stats-row {
+    gap: 8px;
+  }
+  .di-stat-box {
+    padding: 12px 6px;
+  }
+  .di-stat-box__num {
+    font-size: 18px;
+  }
+  .di-mini-chart {
+    height: 60px;
+  }
+  .di-aliflaila__placeholder {
+    min-height: 220px;
+    padding: 20px;
+  }
+  .di-kid {
+    width: 45px;
+    height: 45px;
+  }
+}

@@ -191,7 +191,7 @@ export default function ResearchContent() {
                 <div className="empowering-features">
                   <div className="empowering-feature">
                     <div className="empowering-feature-icon">
-                      <i className="fa fa-file-text"></i>
+                      <i className="fa fa-book"></i>
                     </div>
                     <span>Teacher Guides</span>
                   </div>
@@ -207,7 +207,7 @@ export default function ResearchContent() {
             </div>
             <div className="col-lg-6 col-md-6" data-aos="fade-left" data-aos-duration="1000">
               <div className="empowering-img">
-                <img src="/assets/img/banner-images/about.png" alt="Empowering Institutions" />
+                <img src="/assets/img/research/research-sec.png" alt="Empowering Institutions" />
               </div>
             </div>
           </div>
@@ -219,8 +219,8 @@ export default function ResearchContent() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-5 col-md-5" data-aos="fade-right" data-aos-duration="1000">
-              <div className="professional-img">
-                <img src="/assets/img/books/book-1.png" alt="Professional Learning" />
+              <div className="empowering-img">
+                <img src="/assets/img/research/lang.png" alt="Professional Learning" />
               </div>
             </div>
             <div className="col-lg-7 col-md-7" data-aos="fade-left" data-aos-duration="1000">
@@ -236,7 +236,7 @@ export default function ResearchContent() {
                 <div className="professional-icons">
                   <div className="professional-icon-item">
                     <div className="professional-icon-circle">
-                      <i className="fa fa-chalkboard-teacher"></i>
+                      <i className="fa fa-group"></i>
                     </div>
                     <span>Workshops</span>
                   </div>

@@ -61,6 +61,7 @@ function Header() {
                 <li className="nav-item"><Link className={`nav-link ${pathname == '/ideology' ? 'active' : ''}`} href="/ideology" onClick={handleNavLinkClick}>Ideology</Link></li>
                 {/* <li className="nav-item"><Link className={`nav-link ${pathname == '/services' ? 'active' : ''}`} href="/services" onClick={handleNavLinkClick}>Services</Link></li> */}
                 {/* <li className="nav-item"><Link className={`nav-link ${pathname == '/products' ? 'active' : ''}`} href="/products" onClick={handleNavLinkClick}>Products</Link></li> */}
+                <li className="nav-item"><Link className={`nav-link ${pathname == '/digital-initiatives' ? 'active' : ''}`} href="/digital-initiatives" onClick={handleNavLinkClick}>Digital Initiatives</Link></li>
                 <li className="nav-item"><Link className={`nav-link ${pathname == '/research' ? 'active' : ''}`} href="/research" onClick={handleNavLinkClick}>Research & Publications</Link></li>
                 <li className="nav-item"><Link className={`nav-link ${pathname == '/resources' ? 'active' : ''}`} href="/resources" onClick={handleNavLinkClick}>Resources</Link></li>
                 {/* <li className="nav-item"><Link className={`nav-link ${pathname == '/contact' ? 'active' : ''}`} href="/contact" onClick={handleNavLinkClick}>Contact</Link></li> */}
