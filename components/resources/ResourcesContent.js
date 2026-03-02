@@ -335,7 +335,7 @@ export default function ResourcesContent() {
                       className="res-curriculum-card__line"
                       style={{
                         backgroundColor:
-                          book?.id === 2 ? "#1A3A34" : "#D9822A",
+                          book?.id === 2?"#1A3A34":"#D9822A",
                       }}
                     ></div>
                   </div>

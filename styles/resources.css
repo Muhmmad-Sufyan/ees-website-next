@@ -403,7 +403,7 @@
 .res-curriculum-card__line {
   width: 30px;
   height: 3px;
-  background: #D9822A;
+  /* background: #D9822A; */
   border-radius: 2px;
   margin-top: 20px;
 }
