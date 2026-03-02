@@ -95,6 +95,7 @@ const academicResearch = [
 
 const curriculumResources = [
   {
+    id: 1,
     title: "Modern Physics",
     subtitle: "Grade 11-12",
     subject: "PHYSICS",
@@ -104,6 +105,7 @@ const curriculumResources = [
     textColor: "#fff",
   },
   {
+    id: 2,
     title: "Pure Algebra",
     subtitle: "Humanities",
     subject: "MATH",
@@ -113,6 +115,7 @@ const curriculumResources = [
     textColor: "#fff",
   },
   {
+    id: 3,
     title: "Global Atlas",
     subtitle: "Illustrated",
     subject: "GEOGRAPHY",
@@ -122,6 +125,7 @@ const curriculumResources = [
     textColor: "#fff",
   },
   {
+    id: 4,
     title: "Plant Life",
     subtitle: "Botany Basics",
     subject: "BIOLOGY",
@@ -131,6 +135,7 @@ const curriculumResources = [
     textColor: "#fff",
   },
   {
+    id: 5,
     title: "Plant Life",
     subtitle: "Botany Basics",
     subject: "BIOLOGY",
@@ -201,7 +206,11 @@ export default function ResourcesContent() {
                           alt="icons"
                         />
                       </span>
-                      <img className="mainImg" src={material.image} alt={material.title} />
+                      <img
+                        className="mainImg"
+                        src={material.image}
+                        alt={material.title}
+                      />
                     </div>
                   </div>
                   <div className="res-material-card__info">
@@ -309,7 +318,10 @@ export default function ResourcesContent() {
                   className="res-curriculum-card__thumb"
                   style={{ backgroundColor: book.color, color: book.textColor }}
                 >
-                  <div className="res-curriculum-card__cover" style={{border:'5px solid #FFFFFF0D'}}>
+                  <div
+                    className="res-curriculum-card__cover"
+                    style={{ border: "5px solid #FFFFFF0D" }}
+                  >
                     <span className="res-curriculum-card__subject">
                       {book.subject}
                     </span>
@@ -319,7 +331,13 @@ export default function ResourcesContent() {
                         {book.subtitle}
                       </span>
                     </div>
-                    <div className="res-curriculum-card__line"></div>
+                    <div
+                      className="res-curriculum-card__line"
+                      style={{
+                        backgroundColor:
+                          book?.id === 2 ? "#1A3A34" : "#D9822A",
+                      }}
+                    ></div>
                   </div>
                 </div>
                 <div className="res-curriculum-card__info">
