@@ -7,7 +7,13 @@ import ResourcesContent from "@/components/resources/ResourcesContent";
 export default function Resources() {
   return (
     <>
-      <PageHeader className="resources-ripple" imageClass="resources-image ripple-effect" title="Resources" />
+      <div className="bg-color">
+        <PageHeader
+          className="resources-ripple page-title"
+          imageClass="resources-image"
+          title="Resources"
+        />
+      </div>
       <ResourcesContent />
     </>
   );

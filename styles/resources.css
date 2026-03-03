@@ -1,5 +1,15 @@
 /* ===== Resources Page Header ===== */
-.resources-image {}
+.bg-color {
+  background-color: rgb(104, 240, 245);
+}
+
+.resources-image {
+  background-image: url('/assets/img/research/research-sec.png');
+  background-size: 400px auto !important;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top 21px right 100px !important;
+}
 
 .page-title.resources-image {
   background-attachment: inherit;
@@ -7,8 +17,7 @@
 
 .page-title.resources-image:before {
   background: none;
-  opacity: 1;
-  background-image: linear-gradient(to right, rgb(7 81 84), rgb(7 81 84));
+  opacity: 0;
 }
 
 .resources-ripple canvas {
@@ -434,7 +443,21 @@
   }
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
+  .resources-image {
+    background-size: 300px auto !important;
+    background-position: top 70px right 50px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+ 
+
+  .resources-image{
+    background-size: 200px auto !important;
+    background-position: top 40px right 0px !important;
+  }
+
   .res-section {
     padding: 40px 0 50px;
   }
@@ -474,6 +497,11 @@
 }
 
 @media (max-width: 480px) {
+  
+  .resources-image{
+    background-size: 300px auto !important;
+    background-position: top 88px right 0px !important;
+  }
   .res-curriculum-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
