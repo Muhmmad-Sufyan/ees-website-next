@@ -3,15 +3,19 @@
    ======================================== */
 
 .portfolio-section {
+  position: relative;
+  top: -10px;
+  z-index: 50;
   padding: 100px 0;
-  background: #fff;
+  background: #f9fafb;
   overflow-x: hidden;
 }
 
 .portfolio-header {
   margin-bottom: 40px;
-  padding-left: 20px;              
-  border-left: 4px solid #fca20b; 
+  padding-left: 20px;
+  
+  border-left: 4px solid #fca20b;
 }
 
 .portfolio-label {
@@ -39,6 +43,7 @@
 .portfolio-title span {
   color: #fca20b;
 }
+
 .portfolio-wrapper {
   display: flex;
   gap: 30px;
@@ -167,7 +172,7 @@
   margin: 0 0 15px;
 }
 
-.portfolio-content-text > p {
+.portfolio-content-text>p {
   font-size: 14px;
   font-weight: 400;
   color: #475569;

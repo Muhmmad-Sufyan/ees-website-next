@@ -18,7 +18,8 @@
 }
 .owl-theme .owl-dots .owl-dot {
     border: none;
-    background: transparent;
+    background: red;
+
     padding: 0;
 }
 .main-banner-text {
