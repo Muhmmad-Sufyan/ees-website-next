@@ -110,7 +110,7 @@ export default function WelcomeSection({ OwlCarousel, daily_quotes }) {
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <div className="row">
+            <div className="row mt-sm-0 mt-4">
               <OwlCarousel
                 className="inspiration-slider owl-theme"
                 loop
