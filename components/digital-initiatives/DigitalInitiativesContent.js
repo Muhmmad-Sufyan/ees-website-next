@@ -4,41 +4,52 @@ import Link from "next/link";
 
 const languages = ["Urdu", "English", "Arabic", "Sindhi", "Punjabi"];
 
-const subjects = ["Mathematics", "Biology", "Physics", "Chemistry", "Computer Science", "English"];
+const subjects = [
+  { subject: 'Mathematics', color: '#F97316' },
+  { subject: 'Biology', color: '#0D9488' },
+  { subject: 'Physics', color: '#10B981' },
+  { subject: 'Chemistry', color: '#6366F1' },
+  { subject: 'Computer Science', color: '#A855F7' },
+  { subject: 'English', color: '#F97316' }
+]
 
 const features = [
   {
-    icon: "/assets/img/svgicon/sitemap.svg",
+    icon: "/assets/img/svgicon/magic.png",
     title: "AI Tutoring",
     description: "24/7 personalized AI support to explain complex concepts in simple terms.",
-    color: "#eef6ff",
+    bgColor: "#0D94881A",
+    color: "#0D9488",
   },
   {
-    icon: "/assets/img/svgicon/book2.svg",
+    icon: "/assets/img/svgicon/tickline.png",
     title: "Practice Tests",
     description: "Get ready with mock exams simulations with detailed answer explanations.",
-    color: "#fef0f0",
+    bgColor: "#F973161A",
+    color: "#F97316",
   },
   {
-    icon: "/assets/img/svgicon/home.svg",
+    icon: "/assets/img/svgicon/cap.png",
     title: "School Management",
     description: "Tools for schools to manage student performance and digital curriculum.",
-    color: "#eef9f0",
+    bgColor: "#DBEAFE80",
+    color: "#DBEAFE",
   },
   {
-    icon: "/assets/img/svgicon/award.svg",
+    icon: "/assets/img/svgicon/progress.png",
     title: "Progress Analytics",
     description: "Real-time tracking of strengths and areas that need improvement.",
-    color: "#fff8ee",
+    bgColor: "#D1FAE580",
+    color: "#D1FAE5",
   },
 ];
 
 const recommendedVideos = [
-  { title: "Space Explorers: The Red Planet Adventure", category: "Story Kids Digital", views: "456K views", color: "#e74c3c" },
-  { title: "Under the Sea: Meet the Giant Blue Whale", category: "Nature Series", views: "1.2M views", color: "#2980b9" },
-  { title: "Forest Friends: A Day in the Wild Jungle", category: "Story Time", views: "890K views", color: "#27ae60" },
-  { title: "Math Magic: Numbers are Everywhere!", category: "Learning Lab", views: "1.5M views", color: "#f39c12" },
-  { title: "Little Scientists: DIY Volcano at Home", category: "Science Lab", views: "2.3M views", color: "#8e44ad" },
+  {imgUrl:'/assets/img/digital-initiatives/vid (1).png', title: "Space Explorers: The Red Planet Adventure", category: "Story Kids Digital", views: "456K views", color: "#e74c3c" },
+  {imgUrl:'/assets/img/digital-initiatives/vid (2).png', title: "Under the Sea: Meet the Giant Blue Whale", category: "Nature Series", views: "1.2M views", color: "#2980b9" },
+  {imgUrl:'/assets/img/digital-initiatives/vid (3).png', title: "Forest Friends: A Day in the Wild Jungle", category: "Story Time", views: "890K views", color: "#27ae60" },
+  {imgUrl:'/assets/img/digital-initiatives/vid (4).png', title: "Math Magic: Numbers are Everywhere!", category: "Learning Lab", views: "1.5M views", color: "#f39c12" },
+  {imgUrl:'/assets/img/digital-initiatives/vid (5).png', title: "Little Scientists: DIY Volcano at Home", category: "Science Lab", views: "2.3M views", color: "#8e44ad" },
 ];
 
 export default function DigitalInitiativesContent() {
@@ -48,7 +59,9 @@ export default function DigitalInitiativesContent() {
       <section className="di-aliflaila">
         <div className="container">
           <div className="text-center" >
-            <span className="di-label di-label--red">PAKISTAN&apos;S 1ST KIDS DIGITAL LIBRARY</span>
+            <span className="main-label">
+              <img src="/assets/img/svgicon/starts.svg" alt="starts"/>
+               PAKISTAN&apos;S 1ST KIDS DIGITAL LIBRARY</span>
             <h2 className="di-aliflaila__title">
               AlifLaila <span>Kids Digital Library</span>
             </h2>
@@ -67,31 +80,21 @@ export default function DigitalInitiativesContent() {
           </div>
 
           {/* Content Row */}
-          <div className="row align-items-center di-aliflaila__content">
-            <div className="col-lg-6 col-md-6">
-              <div className="di-aliflaila__img-wrap">
+          <div className="row  di-aliflaila__content">
+            <div className="col-lg-8 col-md-6">
                 <div className="di-aliflaila__placeholder">
-                  <div className="di-aliflaila__placeholder-inner">
-                    <img src="/assets/img/svgicon/book1.svg" alt="" className="di-placeholder-icon" />
-                    <div className="di-aliflaila__placeholder-kids">
-                      <div className="di-kid di-kid--1"></div>
-                      <div className="di-kid di-kid--2"></div>
-                    </div>
-                    <p>Interactive Reading Experience</p>
-                  </div>
+                    <img src="/assets/img/digital-initiatives/digitalInitiatives1.png" alt="" className="di-placeholder-icon" />
                 </div>
-              </div>
             </div>
-            <div className="col-lg-6 col-md-6" >
+            <div className="col-lg-4 col-md-6 mt-md-4 mt-0" >
               <div className="di-aliflaila__info">
                 <div className="di-aliflaila__stats">
                   <div className="di-aliflaila__logo-placeholder">
-                    <img src="/assets/img/svgicon/book1.svg" alt="" />
-                    <span>AlifLaila</span>
+                    <img src="/assets/img/digital-initiatives/aliflaila-logo.png" alt="" />
                   </div>
                   <div className="di-aliflaila__stat">
                     <h3>2,000+</h3>
-                    <span>BOOKS</span>
+                    <span>Children&apos;s Books</span>
                   </div>
                 </div>
                 <p>
@@ -116,14 +119,14 @@ export default function DigitalInitiativesContent() {
       <section className="di-classmate">
         <div className="container">
           <div className="text-center" >
-            <div className="di-classmate__icon-wrap">
-              <img src="/assets/img/svgicon/award.svg" alt="" className="di-classmate__award" />
-            </div>
-            <span className="di-label di-label--gold">EMPOWERING MATRIC STUDENTS</span>
+            <span className="main-label">EMPOWERING MATRIC STUDENTS</span>
+            <div className="di-classmate__title-wrap">
+            <img className="main-label-icon" src="/assets/img/digital-initiatives/classmate-logo.png" alt="starts" />
             <h2 className="di-classmate__title">
               Master Your Exams With<br />
               <span>Ehya Classmate</span>
             </h2>
+            </div>
             <p className="di-classmate__desc">
               The AI-powered companion for matriculation students to excel in
               exams and for schools to manage classrooms effortlessly.
@@ -137,7 +140,7 @@ export default function DigitalInitiativesContent() {
           <div className="di-subject-tags" >
             {subjects.map((subject, index) => (
               <span key={index} className="di-subject-tag">
-                <i className="fa fa-star"></i> {subject}
+                <div className="dot" style={{ backgroundColor: subject.color }}></div> {subject.subject}
               </span>
             ))}
           </div>
@@ -146,82 +149,7 @@ export default function DigitalInitiativesContent() {
 
       {/* ===== Phone Mockups Section ===== */}
       <section className="di-mockups">
-        <div className="container">
-          <div className="di-mockups__wrap" >
-            <div className="di-mockups__phones">
-              {/* Phone 1 - AI Tutor */}
-              <div className="di-mockup-phone di-mockup-phone--left">
-                <div className="di-mockup-phone__notch"></div>
-                <div className="di-mockup-phone__screen">
-                  <div className="di-mockup-phone__header">
-                    <div className="di-mockup-phone__header-dot"></div>
-                    <span className="di-mockup-phone__label">AI Tutor Assistant</span>
-                  </div>
-                  <div className="di-mockup-phone__body">
-                    <div className="di-chat-bubble di-chat-bubble--bot">
-                      <p>Hi! I&apos;m your AI tutor. How can I help you today?</p>
-                    </div>
-                    <div className="di-chat-bubble di-chat-bubble--user">
-                      <p>Explain photosynthesis</p>
-                    </div>
-                    <div className="di-chat-bubble di-chat-bubble--bot">
-                      <p>Photosynthesis is the process by which plants convert sunlight into energy using chlorophyll...</p>
-                    </div>
-                    <div className="di-chat-input">
-                      <span>Type a message...</span>
-                      <i className="fa fa-paper-plane"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone 2 - Dashboard */}
-              <div className="di-mockup-phone di-mockup-phone--right">
-                <div className="di-mockup-phone__notch"></div>
-                <div className="di-mockup-phone__screen">
-                  <div className="di-mockup-phone__header di-mockup-phone__header--dark">
-                    <span className="di-mockup-phone__small-label">DASHBOARD</span>
-                    <span className="di-mockup-phone__label">Your Progress</span>
-                  </div>
-                  <div className="di-mockup-phone__body">
-                    <div className="di-progress-item">
-                      <div className="di-progress-item__top">
-                        <span>Overall Progress</span>
-                        <span className="di-progress-item__pct">70%</span>
-                      </div>
-                      <div className="di-progress-bar">
-                        <div className="di-progress-bar__fill" style={{ width: "70%" }}></div>
-                      </div>
-                    </div>
-                    <div className="di-stats-row">
-                      <div className="di-stat-box di-stat-box--blue">
-                        <span className="di-stat-box__num">85</span>
-                        <span className="di-stat-box__label">Score</span>
-                      </div>
-                      <div className="di-stat-box di-stat-box--green">
-                        <span className="di-stat-box__num">12</span>
-                        <span className="di-stat-box__label">Tests</span>
-                      </div>
-                      <div className="di-stat-box di-stat-box--orange">
-                        <span className="di-stat-box__num">4h</span>
-                        <span className="di-stat-box__label">Study</span>
-                      </div>
-                    </div>
-                    <div className="di-mini-chart">
-                      <div className="di-mini-chart__bar" style={{ height: "40%" }}></div>
-                      <div className="di-mini-chart__bar" style={{ height: "65%" }}></div>
-                      <div className="di-mini-chart__bar" style={{ height: "50%" }}></div>
-                      <div className="di-mini-chart__bar" style={{ height: "80%" }}></div>
-                      <div className="di-mini-chart__bar" style={{ height: "60%" }}></div>
-                      <div className="di-mini-chart__bar" style={{ height: "90%" }}></div>
-                      <div className="di-mini-chart__bar" style={{ height: "70%" }}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img src="/assets/img/digital-initiatives/tabmobline.png" alt="Phone Mockups" />
       </section>
 
       {/* ===== Excellence Section ===== */}
@@ -238,8 +166,8 @@ export default function DigitalInitiativesContent() {
             {features.map((feature, index) => (
               <div className="col-lg-3 col-md-6 col-sm-6" key={index}>
                 <div className="di-feature-card">
-                  <div className="di-feature-card__icon" style={{ backgroundColor: feature.color }}>
-                    <img src={feature.icon} alt={feature.title} className="di-feature-card__svg" />
+                  <div className="di-feature-card__icon" style={{ backgroundColor: feature.bgColor }}>
+                    <img src={feature.icon} alt={feature.title} />
                   </div>
                   <h4>{feature.title}</h4>
                   <p>{feature.description}</p>
@@ -257,14 +185,13 @@ export default function DigitalInitiativesContent() {
             <div className="col-lg-5 col-md-6">
               <div className="di-kidstv__info">
                 <div className="di-kidstv__logo-wrap">
-                  <img src="/assets/img/svgicon/book2.svg" alt="" className="di-kidstv__logo-icon" />
-                  <span className="di-kidstv__logo-badge">KIDS</span>
+                  <img src="/assets/img/digital-initiatives/tvlogo.jpg" alt="" className="di-kidstv__logo-icon" />
                 </div>
                 <h2 className="di-kidstv__title">Ehya Kids TV</h2>
                 <div className="di-kidstv__stats-row">
-                  <span className="di-kidstv__stat-item"><strong>2000+</strong></span>
-                  <span className="di-kidstv__stat-item"><i className="fa fa-eye"></i> <strong>5k+</strong> Views</span>
-                  <span className="di-kidstv__stat-item"><i className="fa fa-play-circle"></i> <strong>100+</strong> Videos</span>
+                  <span className="di-kidstv__stat-item"><img src="/assets/img/svgicon/mans.svg" alt="Subscribers" /> 200K+ Subscribers</span>
+                  <span className="di-kidstv__stat-item"><img src="/assets/img/svgicon/eye.svg" alt="Views" /> 1M+ Views</span>
+                  <span className="di-kidstv__stat-item"><img src="/assets/img/svgicon/video.svg" alt="Videos" /> 150+ Videos</span>
                 </div>
                 <p>
                   Safe, curriculum-aligned edutainment designed to spark
@@ -276,29 +203,14 @@ export default function DigitalInitiativesContent() {
                   <Link href="/resources" className="di-btn di-btn--primary">
                     EXPLORE EPISODES
                   </Link>
-                  <Link href="/resources" className="di-btn di-btn--outline">
+                  <Link href="/resources" className="di-btn di-btn--secondary">
                     <i className="fa fa-play-circle"></i> WATCH TRAILER
                   </Link>
                 </div>
               </div>
             </div>
             <div className="col-lg-7 col-md-6" >
-              <div className="di-kidstv__featured">
-                <div className="di-kidstv__featured-top">
-                  <span className="di-kidstv__featured-label">TOP WATCH</span>
-                  <span className="di-kidstv__featured-badge-top">Jungle Adventures</span>
-                </div>
-                <div className="di-kidstv__featured-card">
-                  <div className="di-kidstv__featured-placeholder">
-                    <i className="fa fa-play-circle"></i>
-                    <span>Featured Video</span>
-                  </div>
-                </div>
-                <div className="di-kidstv__featured-sub">
-                  <span className="di-kidstv__featured-sub-label">TOP WATCH</span>
-                  <span className="di-kidstv__featured-sub-title">Moral Stories</span>
-                </div>
-              </div>
+            <img src="/assets/img/digital-initiatives/videomain.png" alt="Ehya Kids TV"/>
             </div>
           </div>
 
@@ -313,10 +225,8 @@ export default function DigitalInitiativesContent() {
             <div className="di-recommended__grid">
               {recommendedVideos.map((video, index) => (
                 <div className="di-recommended__card" key={index}>
-                  <div className="di-recommended__thumb" style={{ background: `linear-gradient(135deg, ${video.color}, ${video.color}dd)` }}>
-                    <div className="di-recommended__play">
-                      <i className="fa fa-play"></i>
-                    </div>
+                  <div className="di-recommended__thumb">
+                 <img src={video.imgUrl} alt={video.title} className="di-recommended__thumb-img" />
                   </div>
                   <div className="di-recommended__info">
                     <h5>{video.title}</h5>

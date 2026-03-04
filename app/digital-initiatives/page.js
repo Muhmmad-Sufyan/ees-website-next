@@ -7,7 +7,10 @@ import DigitalInitiativesContent from "@/components/digital-initiatives/DigitalI
 export default function DigitalInitiatives() {
   return (
     <>
+    <div className="bg-color">
+
       <PageHeader className="di-ripple" imageClass="di-image ripple-effect" title="Digital Initiatives" />
+    </div>
       <DigitalInitiativesContent />
     </>
   );
