@@ -1138,7 +1138,7 @@
 
   .di-recommended__thumb{
     width: 100%;
-    height: auto;
+    height: 200px;
   }
   .di-stats-row {
     gap: 8px;
