@@ -81,33 +81,8 @@ export default function ResearchContent() {
         <div className="container">
           <div className="journal-preview" data-aos="fade-up" data-aos-duration="1000">
             <div className="row align-items-center">
+           <img src="/assets/img/research/certif.png" className="col-lg-7 col-md-7" alt="itesal image"/>
               <div className="col-lg-5 col-md-5">
-                <div className="journal-preview-img">
-                  <div className="journal-cover">
-                    <div className="journal-cover-header">
-                      <p className="journal-issue">ISSN 2788-1245</p>
-                      <h4>ITESSAL JOURNAL</h4>
-                      <h5>Of Disconnecting Discourses</h5>
-                    </div>
-                    <div className="journal-cover-lines">
-                      <div className="line"></div>
-                      <div className="line"></div>
-                      <div className="line"></div>
-                      <div className="line"></div>
-                      <div className="line"></div>
-                      <div className="line"></div>
-                    </div>
-                    <div className="journal-cover-footer">
-                      <span>ABSTRACT PREVIEW — VOLUME 06, ISSUE 01</span>
-                      <a href="#" className="journal-link">RESEARCH@EHYA.ORG</a>
-                    </div>
-                  </div>
-                  <div className="journal-fab">
-                    <i className="fa fa-arrow-up" style={{ transform: 'rotate(45deg)' }}></i>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-7 col-md-7">
                 <div className="journal-info">
                   <span className="research-subtitle">Project 02: Itessal Journal</span>
                   <h3>Of Disconnecting Discourses</h3>
@@ -236,19 +211,19 @@ export default function ResearchContent() {
                 <div className="professional-icons">
                   <div className="professional-icon-item">
                     <div className="professional-icon-circle">
-                      <i className="fa fa-group"></i>
+                      <img src="/assets/img/svgicon/comunity.svg" style={{width:'24px'}} alt="Mans Groups" />
                     </div>
                     <span>Workshops</span>
                   </div>
                   <div className="professional-icon-item">
                     <div className="professional-icon-circle">
-                      <i className="fa fa-certificate"></i>
+                      <img src="/assets/img/svgicon/certifcation.svg" alt="Certifications" />
                     </div>
                     <span>Certifications</span>
                   </div>
                   <div className="professional-icon-item">
                     <div className="professional-icon-circle">
-                      <i className="fa fa-star"></i>
+                      <img src="/assets/img/svgicon/mans-groups.svg" style={{width:'24px'}} alt="Community" />
                     </div>
                     <span>Community</span>
                   </div>
