@@ -60,7 +60,7 @@ export default function DigitalInitiativesContent() {
         <div className="container">
           <div className="text-center" >
             <span className="main-label">
-              <img src="/assets/img/svgicon/starts.svg" alt="starts"/>
+              <img src="/assets/img/svgicon/starts.svg" alt="starts" className="stars"/>
                PAKISTAN&apos;S 1ST KIDS DIGITAL LIBRARY</span>
             <h2 className="di-aliflaila__title">
               AlifLaila <span>Kids Digital Library</span>
@@ -119,7 +119,9 @@ export default function DigitalInitiativesContent() {
       <section className="di-classmate">
         <div className="container">
           <div className="text-center" >
-            <span className="main-label">EMPOWERING MATRIC STUDENTS</span>
+            <span className="main-label">
+              <img src="/assets/img/svgicon/starts.svg" alt="starts" className="stars"/>
+              EMPOWERING MATRIC STUDENTS</span>
             <div className="di-classmate__title-wrap">
             <img className="main-label-icon" src="/assets/img/digital-initiatives/classmate-logo.png" alt="starts" />
             <h2 className="di-classmate__title">

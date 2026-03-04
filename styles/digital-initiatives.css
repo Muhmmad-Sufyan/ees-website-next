@@ -291,6 +291,11 @@
   width: 134px;
 }
 
+.stars{
+  width: 16px;
+  height: 16px;
+}
+
 .di-classmate__icon-wrap {
   margin-bottom: 16px;
 }
@@ -633,6 +638,9 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  img{
+    width: 26px;
+  }
 }
 
 .di-feature-card h4 {
@@ -704,16 +712,13 @@
   background: #F8FAFC;
   border-radius: 20px;
   border: 1px solid #eee;
+  img {
+    width: 12px;
+  }
 }
 
-.di-kidstv__stat-item strong {
-  color: #1a1a2e;
-}
 
-.di-kidstv__stat-item i {
-  color: #888;
-  font-size: 12px;
-}
+
 
 .di-kidstv__info p {
   font-size: 14px;
@@ -998,6 +1003,7 @@
 }
 
 @media (max-width: 767px) {
+  
   .di-image {
     background-size: 200px auto !important;
     background-position: top 40px right 0px !important;
@@ -1111,8 +1117,10 @@
 
 @media (max-width: 480px) {
   .di-recommended__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(1, 50%);
+    justify-content: center;
+    gap: 16px;
+    margin: 0px auto;
   }
 
   .di-stats-row {
