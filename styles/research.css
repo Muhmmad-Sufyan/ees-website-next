@@ -171,7 +171,7 @@
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    
+
 
 }
 
@@ -200,7 +200,7 @@
 .publication-card-body p {
     font-size: 14px;
     line-height: 24px;
-    color:#475569;
+    color: #475569;
     margin-bottom: 18px;
 }
 
@@ -532,6 +532,11 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border: 1px solid #F1F5F9;
+    padding: 16px;
+    border-radius: 16px ;
+    width: 200px;
 }
 
 .empowering-feature-icon {
@@ -662,7 +667,7 @@
         font-size: 28px;
     }
 
- 
+
 
     .journal-preview {
         padding: 25px;
