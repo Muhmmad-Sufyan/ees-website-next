@@ -125,10 +125,13 @@ export default function DigitalInitiativesContent() {
               EMPOWERING MATRIC STUDENTS</span>
             <div className="di-classmate__title-wrap">
             <img className="main-label-icon" src="/assets/img/digital-initiatives/classmate-logo.png" alt="starts" />
+          <div>
+
             <h2 className="di-classmate__title">
               Master Your Exams With<br />
-              <span>Ehya Classmate</span>
             </h2>
+              <h2 className="subtitle">Ehya Classmate</h2>
+            </div>
             </div>
             <p className="di-classmate__desc">
               The AI-powered companion for matriculation students to excel in

@@ -324,9 +324,10 @@
   line-height: 1.3;
 }
 
-.di-classmate__title span {
+.subtitle {
   font-weight: 800;
   color: #0d7377;
+  text-align:start;
   font-size: 42px;
 }
 
@@ -1021,6 +1022,9 @@
   .di-classmate__title-wrap {
     flex-direction: column;
     gap: 12px;
+  }
+  .subtitle {
+    text-align: center;
   }
 
   .di-image {
