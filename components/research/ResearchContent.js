@@ -8,67 +8,117 @@ export default function ResearchContent() {
       {/* ===== Ehya Publications Section ===== */}
       <section className="publications-section">
         <div className="container">
-          <div className="text-center" data-aos="fade-down" data-aos-duration="1000">
+          <div
+            className="text-center"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             <span className="research-subtitle">Project 01</span>
             <div className="project-title">
               <h2>EHYA PUBLICATIONS</h2>
             </div>
             <p className="publications-desc">
-              Bridging the gap between theoretical research and practical educational application through
-              two distinct publication categories.
+              Bridging the gap between theoretical research and practical
+              educational application through two distinct publication
+              categories.
             </p>
           </div>
 
           <div className="row">
             {/* Advanced Textbooks Card */}
-            <div className="col-lg-6 col-md-6" data-aos="fade-right" data-aos-duration="1000">
+            <div
+              className="col-lg-6 col-md-6"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <div className="publication-card">
-                <div className="publication-card-img" style={{ background: '#dce8e8' }}>
-                  <div className="pub-icon"><i className="fa fa-graduation-cap cap-icon"></i>
-
-
+                <div
+                  className="publication-card-img"
+                >
+                  <div className="pub-icon">
+                    <img src="/assets/img/research/cap.svg" style={{width:"27px",height:'22px'}} alt="book" />
                   </div>
-                  <img src="/assets/img/banner-images/banner-2.png" alt="Advanced Textbooks" />
+                  <img
+                    src="/assets/img/banner-images/banner-2.png"
+                    alt="Advanced Textbooks"
+                    
+                    style={{borderRadius:'22px'}}
+                  />
                 </div>
                 <div className="publication-card-body">
                   <span className="pub-series">Scholarly Series</span>
                   <h3>Advanced Textbooks</h3>
                   <p>
-                    Peer-reviewed academic materials designed for higher education
-                    &amp; professional teacher training. Our textbooks focus on structural
-                    inquiry and curriculum alignment with professional typography.
+                    Peer-reviewed academic materials designed for higher
+                    education &amp; professional teacher training. Our textbooks
+                    focus on structural inquiry and curriculum alignment with
+                    professional typography.
                   </p>
                   <ul className="pub-features">
-                    <li><i className="fa fa-check"></i> Rigorous Academic Frameworks</li>
-                    <li><i className="fa fa-check"></i> Structural Knowledge Design</li>
+                    <li>
+                     <img src="/assets/img/research/detail.svg" alt="Check" 
+                       style={{width:"15px",height:'13px'}}/> Rigorous Academic
+                      Frameworks
+                    </li>
+                    <li>
+                      <img src="/assets/img/research/campus.svg" alt="Check" 
+                       style={{width:"8px",height:'13px'}}/> Structural Knowledge
+                      Design
+                    </li>
                   </ul>
-                  <Link href="/products" className="pub-btn">BROWSE TEXTBOOKS</Link>
+                  <Link href="/products" className="pub-btn">
+                    BROWSE TEXTBOOKS
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* Children's Literature Card */}
-            <div className="col-lg-6 col-md-6" data-aos="fade-left" data-aos-duration="1000">
+            <div
+              className="col-lg-6 col-md-6"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               <div className="publication-card">
-                <div className="publication-card-img" style={{ background: '#e8e4dc' }}>
-                  <div className="pub-icon" style={{ background: '#fca20b' }}>
-                    <i className="fa fa-book"></i>
+                <div
+                  className="publication-card-img"
+                >
+                  <div className="pub-icon" style={{ background: "#fca20b" }}>
+                    <img
+                      src="/assets/img/research/book.svg"
+                      alt="Children's book"
+                       style={{width:"27px",height:'22px'}}
+                    />
                   </div>
-                  <img src="/assets/img/banner-images/banner-3.png" alt="Children's Literature" />
+                  <img
+                    src="/assets/img/banner-images/banner-3.png"
+                    alt="Children's Literature"
+                    style={{borderRadius:'22px'}}
+                  />
                 </div>
                 <div className="publication-card-body">
                   <span className="pub-series">Vibrant Series</span>
                   <h3>Inspiring Children&apos;s Literature</h3>
                   <p>
-                    Engaging, illustrated narratives that nurture character building and
-                    intellectual curiosity. Playful yet professional designs that make
-                    traditional wisdom accessible to the next generation.
+                    Engaging, illustrated narratives that nurture character
+                    building and intellectual curiosity. Playful yet
+                    professional designs that make traditional wisdom accessible
+                    to the next generation.
                   </p>
                   <ul className="pub-features">
-                    <li><i className="fa fa-check"></i> Nurturing Moral Imagination</li>
-                    <li><i className="fa fa-check"></i> Value-Driven Storytelling</li>
+                    <li>
+                      <img src="/assets/img/svgicon/starts.svg" alt="Check" 
+                       style={{width:"16px",height:'16px'}}/>Nurturing Moral
+                      Imagination
+                    </li>
+                    <li>
+                      <img src="/assets/img/research/sun.svg" alt="Check" 
+                       style={{width:"16px",height:'16px'}}/> Value-Driven Storytelling
+                    </li>
                   </ul>
-                  <Link href="/products" className="pub-btn pub-btn-outline">VIEW CHILDREN&apos;S BOOKS</Link>
+                  <Link href="/products"  className="pub-btn">
+                    VIEW CHILDREN&apos;S BOOKS
+                  </Link>
                 </div>
               </div>
             </div>
@@ -79,30 +129,54 @@ export default function ResearchContent() {
       {/* ===== Itessal Journal Section ===== */}
       <section className="journal-section">
         <div className="container">
-          <div className="journal-preview" data-aos="fade-up" data-aos-duration="1000">
+          <div
+            className="journal-preview"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             <div className="row align-items-center">
-           <img src="/assets/img/research/certif.png" className="col-lg-7 col-md-7" alt="itesal image"/>
-              <div className="col-lg-5 col-md-5">
+              <img
+                src="/assets/img/research/certif.png"
+                className="col-lg-6 col-md-7"
+                alt="itesal image"
+              />
+              <div className="col-lg-6 col-md-5">
                 <div className="journal-info">
-                  <span className="research-subtitle">Project 02: Itessal Journal</span>
+                  <span className="research-subtitle">
+                    Project 02: Itessal Journal
+                  </span>
                   <h3>Of Disconnecting Discourses</h3>
                   <p>
-                    The Itessal Journal serves as a premier platform for critical educational
-                    theory. It explores the intersections between traditional wisdom and modern
-                    pedagogy.
+                    The Itessal Journal serves as a premier platform for
+                    critical educational theory. It explores the intersections
+                    between traditional wisdom and modern pedagogy.
                   </p>
                   <div className="journal-badges">
                     <span className="journal-badge">
-                      <i className="fa fa-users"></i> Peer-Reviewed
+                      <img
+                        src="/assets/img/svgicon/verify.svg"
+                        alt="Peer-Reviewed"
+                      />{" "}
+                      Peer-Reviewed
                     </span>
                     <span className="journal-badge">
-                      <i className="fa fa-unlock-alt"></i> Open Access
+                      <img
+                        src="/assets/img/svgicon/lock.svg"
+                        alt="Open Access"
+                      />{" "}
+                      Open Access
                     </span>
                     <span className="journal-badge">
-                      <i className="fa fa-calendar"></i> Quarterly
+                      <img
+                        src="/assets/img/svgicon/calendar.svg"
+                        alt="Quarterly"
+                      />{" "}
+                      Quarterly
                     </span>
                   </div>
-                  <Link href="/resources" className="pub-btn">EXPLORE ARCHIVES</Link>
+                  <Link href="/resources" className="pub-btn">
+                    EXPLORE ARCHIVES
+                  </Link>
                 </div>
               </div>
             </div>
@@ -118,10 +192,9 @@ export default function ResearchContent() {
               <div className="journal-detail-card">
                 <h5>Our Vision</h5>
                 <p>
-                  To provide a scholarly sanctuary for
-                  discourses that challenge conventional
-                  educational boundaries and propose
-                  transformative insights.
+                  To provide a scholarly sanctuary for discourses that challenge
+                  conventional educational boundaries and propose transformative
+                  insights.
                 </p>
               </div>
             </div>
@@ -139,9 +212,8 @@ export default function ResearchContent() {
               <div className="journal-detail-card">
                 <h5>Audience</h5>
                 <p>
-                  Academic researchers, educational
-                  philosophers, and institutional leaders
-                  committed to deep structural inquiry.
+                  Academic researchers, educational philosophers, and
+                  institutional leaders committed to deep structural inquiry.
                 </p>
               </div>
             </div>
@@ -153,36 +225,58 @@ export default function ResearchContent() {
       <section className="empowering-section">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6 col-md-6" data-aos="fade-right" data-aos-duration="1000">
+            <div
+              className="col-lg-6 col-md-6"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <div className="empowering-content">
-                <span className="research-subtitle">Project 03: Ehyaa Services</span>
+                <span className="research-subtitle">
+                  Project 03: Ehyaa Services
+                </span>
                 <h3>Empowering Institutions</h3>
                 <p>
                   Ehya provides comprehensive support to educational
                   institutions through specialized guides and customized
-                  training sessions. We partner with school leaders to
-                  foster holistic academic environments.
+                  training sessions. We partner with school leaders to foster
+                  holistic academic environments.
                 </p>
                 <div className="empowering-features">
                   <div className="empowering-feature">
                     <div className="empowering-feature-icon">
-                      <i className="fa fa-book"></i>
+                      <img src="/assets/img/svgicon/book-re.svg" alt="book" />
                     </div>
                     <span>Teacher Guides</span>
                   </div>
                   <div className="empowering-feature">
                     <div className="empowering-feature-icon">
-                      <i className="fa fa-graduation-cap"></i>
+                      <img
+                        src="/assets/img/svgicon/recover.svg"
+                        alt="In-School Trainings"
+                      />
                     </div>
-                    <span>In-School<br />Trainings</span>
+                    <span>
+                      In-School
+                      <br />
+                      Trainings
+                    </span>
                   </div>
                 </div>
-                <Link href="/contact" className="pub-btn">PARTNER WITH US</Link>
+                <Link href="/contact" className="pub-btn">
+                  PARTNER WITH US
+                </Link>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6" data-aos="fade-left" data-aos-duration="1000">
+            <div
+              className="col-lg-6 col-md-6"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               <div className="empowering-img">
-                <img src="/assets/img/research/research-sec.png" alt="Empowering Institutions" />
+                <img
+                  src="/assets/img/research/research-sec.png"
+                  alt="Empowering Institutions"
+                />
               </div>
             </div>
           </div>
@@ -193,42 +287,69 @@ export default function ResearchContent() {
       <section className="professional-section">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-5 col-md-5" data-aos="fade-right" data-aos-duration="1000">
+            <div
+              className="col-lg-5 col-md-5"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <div className="empowering-img">
-                <img src="/assets/img/research/lang.png" alt="Professional Learning" />
+                <img
+                  src="/assets/img/research/lang.png"
+                  alt="Professional Learning"
+                />
               </div>
             </div>
-            <div className="col-lg-7 col-md-7" data-aos="fade-left" data-aos-duration="1000">
+            <div
+              className="col-lg-7 col-md-7"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               <div className="professional-content">
-                <span className="research-subtitle">Project 04: Itessal PL</span>
+                <span className="research-subtitle">
+                  Project 04: Itessal PL
+                </span>
                 <h3>Professional Learning &amp; Teacher Development</h3>
                 <p>
-                  Itessal PL empowers educators through research-based training. We bridge
-                  training. We bridge the gap between academic theory and classroom excellence.
-                  Itessal PL empowers educators through research-based training. We bridge the
-                  gap between academic theory and classroom excellence.
+                  Itessal PL empowers educators through research-based training.
+                  We bridge training. We bridge the gap between academic theory
+                  and classroom excellence. Itessal PL empowers educators
+                  through research-based training. We bridge the gap between
+                  academic theory and classroom excellence.
                 </p>
                 <div className="professional-icons">
                   <div className="professional-icon-item">
                     <div className="professional-icon-circle">
-                      <img src="/assets/img/svgicon/comunity.svg" style={{width:'24px'}} alt="Mans Groups" />
+                      <img
+                        src="/assets/img/svgicon/comunity.svg"
+                        style={{ width: "24px" }}
+                        alt="Mans Groups"
+                      />
                     </div>
                     <span>Workshops</span>
                   </div>
                   <div className="professional-icon-item">
                     <div className="professional-icon-circle">
-                      <img src="/assets/img/svgicon/certifcation.svg" alt="Certifications" />
+                      <img
+                        src="/assets/img/svgicon/certifcation.svg"
+                        alt="Certifications"
+                      />
                     </div>
                     <span>Certifications</span>
                   </div>
                   <div className="professional-icon-item">
                     <div className="professional-icon-circle">
-                      <img src="/assets/img/svgicon/mans-groups.svg" style={{width:'24px'}} alt="Community" />
+                      <img
+                        src="/assets/img/svgicon/mans-groups.svg"
+                        style={{ width: "24px" }}
+                        alt="Community"
+                      />
                     </div>
                     <span>Community</span>
                   </div>
                 </div>
-                <Link href="/contact" className="pub-btn">JOIN PL PROGRAMS</Link>
+                <Link href="/contact" className="pub-btn">
+                  JOIN PL PROGRAMS
+                </Link>
               </div>
             </div>
           </div>
