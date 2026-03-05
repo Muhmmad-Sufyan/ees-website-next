@@ -127,7 +127,7 @@
 
 .publication-card {
     background: #F8FAFC;
-    border-radius: 16px;
+    border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;

@@ -39,7 +39,7 @@ export default function ResearchContent() {
                     <img src="/assets/img/research/cap.svg" style={{width:"27px",height:'22px'}} alt="book" />
                   </div>
                   <img
-                    src="/assets/img/banner-images/banner-2.png"
+                    src="/assets/img/research/project1.png"
                     alt="Advanced Textbooks"
                     
                     style={{borderRadius:'22px'}}
@@ -91,7 +91,7 @@ export default function ResearchContent() {
                     />
                   </div>
                   <img
-                    src="/assets/img/banner-images/banner-3.png"
+                    src="/assets/img/research/project2.png"
                     alt="Children's Literature"
                     style={{borderRadius:'22px'}}
                   />
