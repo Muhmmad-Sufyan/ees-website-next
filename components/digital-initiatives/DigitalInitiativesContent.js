@@ -113,6 +113,7 @@ export default function DigitalInitiativesContent() {
             </div>
           </div>
         </div>
+        <img src="/assets/img/Overlay+Blur.png" alt="Overlay Blur" className="di-aliflaila__overlay" />
       </section>
 
       {/* ===== Ehya Classmate Section ===== */}
