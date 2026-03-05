@@ -244,7 +244,8 @@ export default function ResearchContent() {
                 <div className="empowering-features">
                   <div className="empowering-feature">
                     <div className="empowering-feature-icon">
-                      <img src="/assets/img/svgicon/book-re.svg" alt="book" />
+                      <img src="/assets/img/svgicon/book-re.svg" alt="book" 
+                       style={{width:"22px",height:'19px'}}/>
                     </div>
                     <span>Teacher Guides</span>
                   </div>
@@ -253,6 +254,7 @@ export default function ResearchContent() {
                       <img
                         src="/assets/img/svgicon/recover.svg"
                         alt="In-School Trainings"
+                        style={{width:"18px",height:'20px'}}
                       />
                     </div>
                     <span>
