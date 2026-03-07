@@ -16,6 +16,8 @@ import IdeologyCards from "@/components/home/IdeologyCards";
 import TextbooksSection from "@/components/home/TextbooksSection";
 import ServicesPreview from "@/components/home/ServicesPreview";
 import NewCollection from "@/components/home/NewCollection";
+import LatestNews from "@/components/home/LatestNews";
+import Milestones from "@/components/home/Milestones";
 
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
@@ -47,9 +49,11 @@ function Home() {
       <section className="books-w"></section>
       <DiagnosisPreview />
       <IdeologyCards />
-      <TextbooksSection />
-      <ServicesPreview />
-      <NewCollection OwlCarousel={OwlCarousel} />
+      {/* <TextbooksSection /> */}
+      {/* <ServicesPreview /> */}
+      {/* <NewCollection OwlCarousel={OwlCarousel} /> */}
+      <Milestones />
+      <LatestNews />
     </>
   );
 }
