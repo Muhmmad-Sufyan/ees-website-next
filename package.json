@@ -9,12 +9,16 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "@tanstack/react-query": "^5.90.21",
     "aos": "^2.3.4",
+    "axios": "^1.13.6",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-image-lightbox": "^5.1.4",
     "react-owl-carousel": "^2.3.3",
+    "react-redux": "^9.2.0",
     "react-water-wave": "^2.0.1"
   },
   "devDependencies": {

@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,23 +11,11 @@ const navItems = [
   { label: "Authors", href: "/admin/authors", icon: "fa-user" },
 ];
 
-export default function Sidebar() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+export default function Sidebar({ sidebarOpen, closeSidebar }) {
   const pathname = usePathname();
-
-  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
-  const closeSidebar = () => setSidebarOpen(false);
 
   return (
     <>
-      {/* Mobile Navbar */}
-      <div className="admin-mobile-navbar">
-        <h5>Admin Panel</h5>
-        <button className="admin-menu-btn" onClick={toggleSidebar}>
-          <i className="fa fa-bars"></i>
-        </button>
-      </div>
-
       {/* Overlay */}
       <div
         className={`sidebar-overlay ${sidebarOpen ? "show" : ""}`}

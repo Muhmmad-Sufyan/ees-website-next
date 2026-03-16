@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"d:\\\\Ehya education\\\\ees-website-next/app/admin/\\(dashboard\\)\")",
+      "Bash(find \"d:\\\\Ehya education\\\\ees-website-next/app/admin/\\(dashboard\\)\" -type f -name \"*.js\")",
+      "Bash(npm install @tanstack/react-query)",
+      "Bash(ls -d \"d:/Ehya education/ees-website-next\"/*/)",
+      "Bash(mkdir -p src)",
+      "Bash(mv app components constants repos store styles data src/)",
+      "Bash(cp -r app src/app)",
+      "Bash(cp -r components src/components)",
+      "Bash(cp -r constants src/constants)",
+      "Bash(cp -r repos src/repos)",
+      "Bash(cp -r store src/store)",
+      "Bash(cp -r styles src/styles)",
+      "Bash(cp -r data src/data)",
+      "Bash(ls -d */)"
+    ]
+  }
+}

@@ -1,6 +1,7 @@
 import Script from "next/script";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import QueryProvider from "@/components/QueryProvider";
 
 export const metadata = {
   title: {
@@ -39,9 +40,11 @@ export default function RootLayout({ children }) {
           src="/assets/js/wow.js"
           strategy="afterInteractive"
         />
-        <LayoutWrapper>
-          {children}
-        </LayoutWrapper>
+        <QueryProvider>
+          <LayoutWrapper>
+            {children}
+          </LayoutWrapper>
+        </QueryProvider>
       </body>
     </html>
   );
