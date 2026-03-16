@@ -1,7 +1,6 @@
 import Script from "next/script";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import LayoutWrapper from "@/components/LayoutWrapper";
 
 export const metadata = {
   title: {
@@ -40,9 +39,9 @@ export default function RootLayout({ children }) {
           src="/assets/js/wow.js"
           strategy="afterInteractive"
         />
-        <Header />
-        {children}
-        <Footer />
+        <LayoutWrapper>
+          {children}
+        </LayoutWrapper>
       </body>
     </html>
   );
