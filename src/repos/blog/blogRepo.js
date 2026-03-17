@@ -4,7 +4,7 @@ import {
   PUBLIC_BLOGS,
   PUBLIC_BLOG_BY_SLUG,
 } from "@/constants/endpoints";
-import { get, postFormData, putFormData, del } from "@/constants/api-helper";
+import { get, postFormData, del } from "@/constants/api-helper";
 import { buildQuery } from "@/repos/helpers";
 
 class BlogRepository {
@@ -31,7 +31,8 @@ class BlogRepository {
   }
 
   async update(id, formData) {
-    return putFormData(ADMIN_BLOG_DETAIL(id), formData);
+    formData.append("_method", "PUT");
+    return postFormData(ADMIN_BLOG_DETAIL(id), formData);
   }
 
   async delete(id) {

@@ -73,8 +73,8 @@ export default function AuthorsPage() {
                       <td>{(currentPage - 1) * perPage + index + 1}</td>
                       <td>
                         <div className="author-name-cell">
-                          {author.profile_image ? (
-                            <img src={author.profile_image} alt={author.name} className="author-avatar" />
+                          {author.profile_image_url ? (
+                            <img src={author.profile_image_url} alt={author.name} className="author-avatar" />
                           ) : (
                             <div className="author-avatar-placeholder">
                               <i className="fa fa-user"></i>

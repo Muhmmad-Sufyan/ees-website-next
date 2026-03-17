@@ -4,7 +4,7 @@ import {
   PUBLIC_AUTHORS,
   PUBLIC_AUTHOR_BY_SLUG,
 } from "@/constants/endpoints";
-import { get, postFormData, putFormData, del } from "@/constants/api-helper";
+import { get, postFormData, del } from "@/constants/api-helper";
 import { buildQuery } from "@/repos/helpers";
 
 class AuthorRepository {
@@ -31,7 +31,8 @@ class AuthorRepository {
   }
 
   async update(id, formData) {
-    return putFormData(ADMIN_AUTHOR_DETAIL(id), formData);
+    formData.append("_method", "PUT");
+    return postFormData(ADMIN_AUTHOR_DETAIL(id), formData);
   }
 
   async delete(id) {

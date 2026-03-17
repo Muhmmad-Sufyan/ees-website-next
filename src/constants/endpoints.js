@@ -27,6 +27,8 @@ export const ADMIN_TAG_DETAIL = (id) => `/admin/tags/${id}`;
 // ========================
 // Admin Blogs
 // ========================
+export const ADMIN_DASHBOARD_STATS = "/admin/dashboard/stats";
+export const ADMIN_IMAGE_UPLOAD = "/admin/images/upload";
 export const ADMIN_BLOGS = "/admin/blogs";
 export const ADMIN_BLOG_DETAIL = (id) => `/admin/blogs/${id}`;
 

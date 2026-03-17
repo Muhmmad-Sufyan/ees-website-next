@@ -47,7 +47,7 @@ export default function EditBlogPage() {
       setMetaTitle(blog.meta_title || "");
       setMetaDescription(blog.meta_description || "");
       setStatus(blog.status || "published");
-      setImagePreview(blog.banner_image || null);
+      setImagePreview(blog.banner_image_url || blog.banner_image || null);
       setLoaded(true);
     }
   }, [blogData, loaded]);
@@ -62,6 +62,14 @@ export default function EditBlogPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!imagePreview && !bannerImage) return showToast("error", "Banner image is required.");
+    if (!content || content === "<p><br></p>") return showToast("error", "Content is required.");
+    if (!authorId) return showToast("error", "Author is required.");
+    if (categoryIds.length === 0) return showToast("error", "At least one category is required.");
+    if (tagIds.length === 0) return showToast("error", "At least one tag is required.");
+    if (!metaTitle) return showToast("error", "Meta title is required.");
+    if (!metaDescription) return showToast("error", "Meta description is required.");
+
     const formData = new FormData();
     formData.append("title", title);
     formData.append("slug", slug);

@@ -1,25 +1,11 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import dynamic from "next/dynamic";
+import { postFormData } from "@/constants/api-helper";
+import { ADMIN_IMAGE_UPLOAD } from "@/constants/endpoints";
 import "react-quill-new/dist/quill.snow.css";
 
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
-
-const modules = {
-  toolbar: {
-    container: [
-      [{ header: [1, 2, 3, 4, 5, 6, false] }],
-      ["bold", "italic", "underline", "strike"],
-      [{ color: [] }, { background: [] }],
-      [{ align: "" }, { align: "center" }, { align: "right" }, { align: "justify" }],
-      [{ list: "ordered" }, { list: "bullet" }],
-      ["blockquote", "code-block"],
-      ["link", "image"],
-      [{ indent: "-1" }, { indent: "+1" }],
-      ["clean"],
-    ],
-  },
-};
 
 const formats = [
   "header",
@@ -85,6 +71,56 @@ function ImageResizePopup({ image, onClose, onSave }) {
 export default function RichTextEditor({ value, onChange }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const containerRef = useRef(null);
+  const quillRef = useRef(null);
+
+  const imageHandler = useCallback(() => {
+    const input = document.createElement("input");
+    input.setAttribute("type", "file");
+    input.setAttribute("accept", "image/*");
+    input.click();
+
+    input.onchange = async () => {
+      const file = input.files[0];
+      if (!file) return;
+
+      const quill = quillRef.current?.getEditor();
+      if (!quill) return;
+
+      const range = quill.getSelection(true);
+
+      try {
+        const formData = new FormData();
+        formData.append("image", file);
+        const res = await postFormData(ADMIN_IMAGE_UPLOAD, formData);
+        const url = res?.data?.url;
+        if (url) {
+          quill.insertEmbed(range.index, "image", url);
+          quill.setSelection(range.index + 1);
+        }
+      } catch (err) {
+        console.error("Image upload failed:", err);
+      }
+    };
+  }, []);
+
+  const modules = useMemo(() => ({
+    toolbar: {
+      container: [
+        [{ header: [1, 2, 3, 4, 5, 6, false] }],
+        ["bold", "italic", "underline", "strike"],
+        [{ color: [] }, { background: [] }],
+        [{ align: "" }, { align: "center" }, { align: "right" }, { align: "justify" }],
+        [{ list: "ordered" }, { list: "bullet" }],
+        ["blockquote", "code-block"],
+        ["link", "image"],
+        [{ indent: "-1" }, { indent: "+1" }],
+        ["clean"],
+      ],
+      handlers: {
+        image: imageHandler,
+      },
+    },
+  }), [imageHandler]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -184,6 +220,7 @@ export default function RichTextEditor({ value, onChange }) {
   return (
     <div ref={containerRef}>
       <ReactQuill
+        ref={quillRef}
         theme="snow"
         value={value}
         onChange={onChange}

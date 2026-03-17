@@ -1,3 +1,4 @@
+export { default as useGetDashboardStats } from "./useGetDashboardStats";
 export { default as useGetBlogs } from "./useGetBlogs";
 export { default as useGetCategories } from "./useGetCategories";
 export { default as useGetTags } from "./useGetTags";
