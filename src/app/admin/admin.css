@@ -896,6 +896,16 @@
   gap: 8px;
 }
 
+.ql-snow .ql-tooltip.ql-hidden {
+  display: none !important;
+}
+
+.ql-snow .ql-tooltip.tooltip-hover-show {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 .ql-snow .ql-tooltip::before {
   color: #666;
   font-size: 13px;
@@ -989,6 +999,99 @@
 .ql-editor a {
   color: #2196f3;
   text-decoration: underline;
+}
+
+.ql-editor img {
+  cursor: pointer;
+  max-width: 100%;
+  transition: outline 0.2s;
+}
+
+.ql-editor img:hover {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Image Resize Popup */
+.image-resize-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1080;
+  padding: 20px;
+}
+
+.image-resize-popup {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.image-resize-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.image-resize-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.image-resize-body {
+  padding: 20px;
+}
+
+.image-resize-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.image-resize-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.image-resize-field input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.image-resize-field input:focus {
+  border-color: #1a1a2e;
+  box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.1);
+}
+
+.image-resize-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 20px;
+  border-top: 1px solid #eee;
 }
 
 /* Responsive */
