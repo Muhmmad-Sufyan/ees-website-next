@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Pagination from "@/components/admin/Pagination";
 import DeleteModal from "@/components/admin/DeleteModal";
 import { useGetBlogs, useDeleteBlog } from "@/hooks";
 import showToast from "@/utils/showToast";
 
 export default function BlogPage() {
+  const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
   const perPage = 10;
   const [deleteItem, setDeleteItem] = useState(null);
@@ -36,7 +38,7 @@ export default function BlogPage() {
     <div className="admin-content">
       <div className="admin-table-header">
         <h2>Blog Posts</h2>
-        <button className="btn-add">
+        <button className="btn-add" onClick={() => router.push("/admin/blog/add")}>
           <i className="fa fa-plus"></i> Add New Post
         </button>
       </div>
@@ -79,7 +81,7 @@ export default function BlogPage() {
                       </td>
                       <td>
                         <div className="actions">
-                          <button className="btn-edit" title="Edit">
+                          <button className="btn-edit" title="Edit" onClick={() => router.push(`/admin/blog/edit/${blog.id}`)}>
                             <i className="fa fa-pencil"></i>
                           </button>
                           <button className="btn-delete" title="Delete" onClick={() => setDeleteItem(blog)}>
