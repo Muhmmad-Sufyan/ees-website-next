@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import showToast from "@/utils/showToast";
 import { setCredentials } from "@/store/slices/authSlice";
 import { AuthRepo } from "@/repos/auth/authRepo";
+import GuestGuard from "@/components/admin/GuestGuard";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -32,6 +33,7 @@ export default function AdminLogin() {
   };
 
   return (
+    <GuestGuard>
     <div className="admin-login-wrapper">
       <div className="admin-login-card">
         <h3>Admin Login</h3>
@@ -65,5 +67,6 @@ export default function AdminLogin() {
         </form>
       </div>
     </div>
+    </GuestGuard>
   );
 }
