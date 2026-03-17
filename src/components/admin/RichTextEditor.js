@@ -10,7 +10,7 @@ const modules = {
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
       ["bold", "italic", "underline", "strike"],
       [{ color: [] }, { background: [] }],
-      [{ align: [] }],
+      [{ align: "" }, { align: "center" }, { align: "right" }, { align: "justify" }],
       [{ list: "ordered" }, { list: "bullet" }],
       ["blockquote", "code-block"],
       ["link", "image"],
