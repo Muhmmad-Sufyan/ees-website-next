@@ -2,8 +2,7 @@ import axios from "axios";
 import { store } from "@/store/store";
 import { logout } from "@/store/slices/authSlice";
 
-const BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000/api";
+const BASE_URL =  "http://ees-api.ehya.com.pk/api"
 
 const axiosApi = axios.create({
   baseURL: BASE_URL,

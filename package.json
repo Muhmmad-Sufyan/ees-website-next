@@ -19,6 +19,7 @@
     "react-image-lightbox": "^5.1.4",
     "react-owl-carousel": "^2.3.3",
     "react-redux": "^9.2.0",
+    "react-toastify": "^11.0.5",
     "react-water-wave": "^2.0.1"
   },
   "devDependencies": {

@@ -2,17 +2,32 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import showToast from "@/utils/showToast";
+import { setCredentials } from "@/store/slices/authSlice";
+import { AuthRepo } from "@/repos/auth/authRepo";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Add real authentication logic here
-    if (email && password) {
+    setLoading(true);
+
+    try {
+      const data = await AuthRepo.login(email, password);
+      console.log("Login response:", data.token, data.user);
+      dispatch(setCredentials({ token: data.token, user: data.user }));
+      showToast("success", "Login successful!");
       router.push("/admin");
+    } catch (err) {
+      showToast("error", err?.response?.data?.message || "Invalid email or password");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -44,8 +59,8 @@ export default function AdminLogin() {
               required
             />
           </div>
-          <button type="submit" className="btn-login">
-            Sign In
+          <button type="submit" className="btn-login" disabled={loading}>
+            {loading ? "Signing In..." : "Sign In"}
           </button>
         </form>
       </div>
