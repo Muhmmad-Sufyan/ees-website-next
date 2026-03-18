@@ -12,7 +12,7 @@ export default function DashboardLayout({ children }) {
       <div className="admin-wrapper">
         {/* Mobile Top Navbar */}
         <div className="admin-mobile-navbar">
-          <h5>Admin Panel</h5>
+          <h5>EHYA Admin</h5>
           <button
             className="admin-menu-btn"
             onClick={() => setSidebarOpen(!sidebarOpen)}

@@ -6,5 +6,8 @@ export default function useGetBlog(id) {
     queryKey: ["blog", id],
     queryFn: () => BlogRepo.getById(id),
     enabled: !!id,
+    staleTime: 0,
+    gcTime: 0,
+    refetchOnMount: "always",
   });
 }
