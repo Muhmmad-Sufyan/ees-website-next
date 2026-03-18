@@ -16,3 +16,4 @@ export { default as useUpdateBlog } from "./useUpdateBlog";
 export { default as useDeleteAuthor } from "./useDeleteAuthor";
 export { default as useCreateAuthor } from "./useCreateAuthor";
 export { default as useUpdateAuthor } from "./useUpdateAuthor";
+export { default as useGetPublicBlogs } from "./useGetPublicBlogs";
