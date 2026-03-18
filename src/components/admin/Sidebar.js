@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { logout } from "@/store/slices/authSlice";
 
 const navItems = [
   { label: "Dashboard", href: "/admin", icon: "fa-dashboard" },
@@ -13,6 +15,14 @@ const navItems = [
 
 export default function Sidebar({ sidebarOpen, closeSidebar }) {
   const pathname = usePathname();
+  const router = useRouter();
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    closeSidebar();
+    router.push("/admin/login");
+  };
 
   return (
     <>
@@ -44,10 +54,10 @@ export default function Sidebar({ sidebarOpen, closeSidebar }) {
             </li>
           ))}
           <li>
-            <Link href="/admin/login" onClick={closeSidebar}>
+            <a href="#" onClick={(e) => { e.preventDefault(); handleLogout(); }}>
               <i className="fa fa-sign-out"></i>
               Logout
-            </Link>
+            </a>
           </li>
         </ul>
       </aside>

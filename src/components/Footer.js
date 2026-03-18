@@ -30,6 +30,7 @@ function Footer() {
                 <li><Link href="/products">Products</Link></li>
                 <li><Link href="/resources">Resources</Link></li>
                 <li><Link href="/contact">Contact</Link></li>
+                <li><Link href="/admin/login">Admin Login</Link></li>
               </ul>
             </div>
             <div className="col-lg-4 col-md-3">

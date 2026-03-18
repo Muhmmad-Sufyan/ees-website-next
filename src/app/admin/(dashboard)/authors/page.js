@@ -45,9 +45,7 @@ export default function AuthorsPage() {
         </button>
       </div>
       <div className="admin-table-wrapper">
-        {isLoading ? (
-          <p style={{ padding: "20px", textAlign: "center" }}>Loading...</p>
-        ) : isError ? (
+        {isError ? (
           <p style={{ padding: "20px", textAlign: "center", color: "red" }}>Failed to load authors.</p>
         ) : (
           <>
@@ -63,7 +61,15 @@ export default function AuthorsPage() {
                 </tr>
               </thead>
               <tbody>
-                {authors.length === 0 ? (
+                {isLoading ? (
+                  Array.from({ length: 5 }).map((_, i) => (
+                    <tr key={i}>
+                      {Array.from({ length: 6 }).map((_, j) => (
+                        <td key={j}><div className="skeleton-cell"></div></td>
+                      ))}
+                    </tr>
+                  ))
+                ) : authors.length === 0 ? (
                   <tr>
                     <td colSpan="6" style={{ padding: "40px 20px", textAlign: "center", color: "#888" }}>No data found.</td>
                   </tr>
@@ -105,7 +111,7 @@ export default function AuthorsPage() {
                 )}
               </tbody>
             </table>
-            {authors.length > 0 && (
+            {!isLoading && authors.length > 0 && (
               <Pagination
                 currentPage={meta.current_page || currentPage}
                 totalPages={meta.last_page || 1}

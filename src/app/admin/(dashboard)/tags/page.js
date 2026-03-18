@@ -46,9 +46,7 @@ export default function TagsPage() {
         </button>
       </div>
       <div className="admin-table-wrapper">
-        {isLoading ? (
-          <p style={{ padding: "20px", textAlign: "center" }}>Loading...</p>
-        ) : isError ? (
+        {isError ? (
           <p style={{ padding: "20px", textAlign: "center", color: "red" }}>Failed to load tags.</p>
         ) : (
           <>
@@ -62,7 +60,15 @@ export default function TagsPage() {
                 </tr>
               </thead>
               <tbody>
-                {tags.length === 0 ? (
+                {isLoading ? (
+                  Array.from({ length: 5 }).map((_, i) => (
+                    <tr key={i}>
+                      {Array.from({ length: 4 }).map((_, j) => (
+                        <td key={j}><div className="skeleton-cell"></div></td>
+                      ))}
+                    </tr>
+                  ))
+                ) : tags.length === 0 ? (
                   <tr>
                     <td colSpan="4" style={{ padding: "40px 20px", textAlign: "center", color: "#888" }}>No data found.</td>
                   </tr>
@@ -87,7 +93,7 @@ export default function TagsPage() {
                 )}
               </tbody>
             </table>
-            {tags.length > 0 && (
+            {!isLoading && tags.length > 0 && (
               <Pagination
                 currentPage={meta.current_page || currentPage}
                 totalPages={meta.last_page || 1}

@@ -43,9 +43,7 @@ export default function BlogPage() {
         </button>
       </div>
       <div className="admin-table-wrapper">
-        {isLoading ? (
-          <p style={{ padding: "20px", textAlign: "center" }}>Loading...</p>
-        ) : isError ? (
+        {isError ? (
           <p style={{ padding: "20px", textAlign: "center", color: "red" }}>Failed to load blogs.</p>
         ) : (
           <>
@@ -62,7 +60,15 @@ export default function BlogPage() {
                 </tr>
               </thead>
               <tbody>
-                {blogs.length === 0 ? (
+                {isLoading ? (
+                  Array.from({ length: 5 }).map((_, i) => (
+                    <tr key={i}>
+                      {Array.from({ length: 7 }).map((_, j) => (
+                        <td key={j}><div className="skeleton-cell"></div></td>
+                      ))}
+                    </tr>
+                  ))
+                ) : blogs.length === 0 ? (
                   <tr>
                     <td colSpan="7" style={{ padding: "40px 20px", textAlign: "center", color: "#888" }}>No data found.</td>
                   </tr>
@@ -94,7 +100,7 @@ export default function BlogPage() {
                 )}
               </tbody>
             </table>
-            {blogs.length > 0 && (
+            {!isLoading && blogs.length > 0 && (
               <Pagination
                 currentPage={meta.current_page || currentPage}
                 totalPages={meta.last_page || 1}
