@@ -78,7 +78,7 @@ export default function BlogPage() {
                       <td>{(currentPage - 1) * perPage + index + 1}</td>
                       <td>{blog.title}</td>
                       <td>{blog.author?.name || "-"}</td>
-                      <td>{blog.category?.name || "-"}</td>
+                      <td><span className="text-truncate-cell">{blog.categories?.[0]?.name || "-"}</span></td>
                       <td>{blog.created_at?.split("T")[0] || "-"}</td>
                       <td>
                         <span className={`badge-status ${blog.status === "published" ? "badge-published" : "badge-draft"}`}>

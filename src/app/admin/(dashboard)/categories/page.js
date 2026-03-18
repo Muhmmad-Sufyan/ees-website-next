@@ -79,7 +79,7 @@ export default function CategoriesPage() {
                       <td>{(currentPage - 1) * perPage + index + 1}</td>
                       <td>{cat.name}</td>
                       <td>{cat.slug}</td>
-                      <td>{cat.description || "-"}</td>
+                      <td><span className="text-truncate-cell">{cat.description || "-"}</span></td>
                       <td>
                         <span className={`badge-status ${cat.is_active ? "badge-active" : "badge-inactive"}`}>
                           {cat.is_active ? "Active" : "Inactive"}

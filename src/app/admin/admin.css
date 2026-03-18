@@ -381,6 +381,15 @@
   background: #f8f9fb;
 }
 
+.text-truncate-cell {
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
 .admin-table .actions {
   display: flex;
   gap: 8px;
@@ -1185,6 +1194,10 @@
 
   .admin-table-wrapper {
     overflow-x: scroll;
+  }
+
+  .admin-table td {
+    white-space: nowrap;
   }
 
   .admin-pagination {

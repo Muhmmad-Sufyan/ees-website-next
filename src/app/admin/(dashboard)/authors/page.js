@@ -90,7 +90,7 @@ export default function AuthorsPage() {
                         </div>
                       </td>
                       <td>{author.slug}</td>
-                      <td>{author.bio || "-"}</td>
+                      <td><span className="text-truncate-cell">{author.bio || "-"}</span></td>
                       <td>
                         <span className={`badge-status ${author.is_active ? "badge-active" : "badge-inactive"}`}>
                           {author.is_active ? "Active" : "Inactive"}
