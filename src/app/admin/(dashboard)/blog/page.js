@@ -87,6 +87,9 @@ export default function BlogPage() {
                       </td>
                       <td>
                         <div className="actions">
+                          <button className="btn-view" title="View" onClick={() => router.push(`/admin/blog/${blog.id}`)}>
+                            <i className="fa fa-eye"></i>
+                          </button>
                           <button className="btn-edit" title="Edit" onClick={() => router.push(`/admin/blog/edit/${blog.id}`)}>
                             <i className="fa fa-pencil"></i>
                           </button>
