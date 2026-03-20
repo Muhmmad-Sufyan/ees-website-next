@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
+import Select from "react-select";
 import { useCreateAuthor } from "@/hooks";
 import showToast from "@/utils/showToast";
 
@@ -9,18 +10,39 @@ export default function AddAuthorModal({ onClose }) {
   const [bio, setBio] = useState("");
   const [isActive, setIsActive] = useState("1");
   const [imagePreview, setImagePreview] = useState(null);
+  const [errors, setErrors] = useState({});
   const fileRef = useRef(null);
   const createAuthor = useCreateAuthor();
+
+  const clearError = (field) => {
+    setErrors((prev) => {
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
+  };
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       setImagePreview(URL.createObjectURL(file));
+      clearError("image");
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newErrors = {};
+    if (!name.trim()) newErrors.name = "Name is required.";
+    if (!slug.trim()) newErrors.slug = "Slug is required.";
+    if (!fileRef.current?.files[0] && !imagePreview) newErrors.image = "Profile image is required.";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
     const formData = new FormData();
     formData.append("name", name);
     formData.append("slug", slug);
@@ -50,11 +72,11 @@ export default function AddAuthorModal({ onClose }) {
             <i className="fa fa-times"></i>
           </button>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} noValidate>
           <div className="admin-modal-body">
             <div className="form-group" style={{ textAlign: "center" }}>
               <div
-                className="image-upload-area"
+                className={`image-upload-area${errors.image ? " banner-upload-error" : ""}`}
                 onClick={() => fileRef.current?.click()}
               >
                 {imagePreview ? (
@@ -73,29 +95,30 @@ export default function AddAuthorModal({ onClose }) {
                 onChange={handleImageChange}
                 style={{ display: "none" }}
               />
+              {errors.image && <span className="field-error">{errors.image}</span>}
             </div>
             <div className="form-row">
               <div className="form-group">
                 <label>Name</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className={`form-control${errors.name ? " form-control-error" : ""}`}
                   placeholder="Enter author name"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
+                  onChange={(e) => { setName(e.target.value); clearError("name"); }}
                 />
+                {errors.name && <span className="field-error">{errors.name}</span>}
               </div>
               <div className="form-group">
                 <label>Slug</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className={`form-control${errors.slug ? " form-control-error" : ""}`}
                   placeholder="Enter author slug"
                   value={slug}
-                  onChange={(e) => setSlug(e.target.value)}
-                  required
+                  onChange={(e) => { setSlug(e.target.value); clearError("slug"); }}
                 />
+                {errors.slug && <span className="field-error">{errors.slug}</span>}
               </div>
             </div>
             <div className="form-group">
@@ -110,14 +133,15 @@ export default function AddAuthorModal({ onClose }) {
             </div>
             <div className="form-group">
               <label>Status</label>
-              <select
-                className="form-control"
-                value={isActive}
-                onChange={(e) => setIsActive(e.target.value)}
-              >
-                <option value="1">Active</option>
-                <option value="0">Inactive</option>
-              </select>
+              <Select
+                options={[
+                  { value: "1", label: "Active" },
+                  { value: "0", label: "Inactive" },
+                ]}
+                value={isActive === "1" ? { value: "1", label: "Active" } : { value: "0", label: "Inactive" }}
+                onChange={(selected) => setIsActive(selected.value)}
+                classNamePrefix="react-select"
+              />
             </div>
           </div>
           <div className="admin-modal-footer">

@@ -19,6 +19,7 @@ export default function AddBlogPage() {
   const [status, setStatus] = useState("published");
   const [bannerImage, setBannerImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
+  const [errors, setErrors] = useState({});
 
   const { data: authorsData } = useGetAuthors({ page: 1, per_page: 100 });
   const { data: categoriesData } = useGetCategories({ page: 1, per_page: 100 });
@@ -29,27 +30,50 @@ export default function AddBlogPage() {
   const categories = categoriesData?.data || [];
   const tags = tagsData?.data || [];
 
+  const authorOptions = authors.map((a) => ({ value: a.id, label: a.name }));
   const tagOptions = tags.map((t) => ({ value: t.id, label: t.name }));
   const categoryOptions = categories.map((c) => ({ value: c.id, label: c.name }));
+  const statusOptions = [
+    { value: "published", label: "Published" },
+    { value: "draft", label: "Draft" },
+  ];
+
+  const clearError = (field) => {
+    setErrors((prev) => {
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
+  };
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       setBannerImage(file);
       setImagePreview(URL.createObjectURL(file));
+      clearError("bannerImage");
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!bannerImage) return showToast("error", "Banner image is required.");
-    if (!content || content === "<p><br></p>") return showToast("error", "Content is required.");
-    if (!authorId) return showToast("error", "Author is required.");
-    if (categoryIds.length === 0) return showToast("error", "At least one category is required.");
-    if (tagIds.length === 0) return showToast("error", "At least one tag is required.");
-    if (!metaTitle) return showToast("error", "Meta title is required.");
-    if (!metaDescription) return showToast("error", "Meta description is required.");
+    const newErrors = {};
+    if (!title.trim()) newErrors.title = "Title is required.";
+    if (!slug.trim()) newErrors.slug = "Slug is required.";
+    if (!bannerImage) newErrors.bannerImage = "Banner image is required.";
+    if (!content || content === "<p><br></p>") newErrors.content = "Content is required.";
+    if (!authorId) newErrors.authorId = "Author is required.";
+    if (categoryIds.length === 0) newErrors.categoryIds = "At least one category is required.";
+    if (tagIds.length === 0) newErrors.tagIds = "At least one tag is required.";
+    if (!metaTitle.trim()) newErrors.metaTitle = "Meta title is required.";
+    if (!metaDescription.trim()) newErrors.metaDescription = "Meta description is required.";
 
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
     const formData = new FormData();
     formData.append("title", title);
     formData.append("slug", slug);
@@ -82,7 +106,7 @@ export default function AddBlogPage() {
         </button>
       </div>
       <div className="blog-form-wrapper">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} noValidate>
           <div className="blog-form-grid">
             <div className="blog-form-main">
               <div className="form-card">
@@ -91,49 +115,54 @@ export default function AddBlogPage() {
                     <label>Title</label>
                     <input
                       type="text"
-                      className="form-control"
+                      className={`form-control${errors.title ? " form-control-error" : ""}`}
                       placeholder="Enter blog title"
                       value={title}
-                      onChange={(e) => setTitle(e.target.value)}
-                      required
+                      onChange={(e) => { setTitle(e.target.value); clearError("title"); }}
                     />
+                    {errors.title && <span className="field-error">{errors.title}</span>}
                   </div>
                   <div className="form-group">
                     <label>Slug</label>
                     <input
                       type="text"
-                      className="form-control"
+                      className={`form-control${errors.slug ? " form-control-error" : ""}`}
                       placeholder="Enter blog slug"
                       value={slug}
-                      onChange={(e) => setSlug(e.target.value)}
-                      required
+                      onChange={(e) => { setSlug(e.target.value); clearError("slug"); }}
                     />
+                    {errors.slug && <span className="field-error">{errors.slug}</span>}
                   </div>
                 </div>
                 <div className="form-group">
                   <label>Content</label>
-                  <RichTextEditor value={content} onChange={setContent} />
+                  <div className={errors.content ? "editor-error-wrapper" : ""}>
+                    <RichTextEditor value={content} onChange={(val) => { setContent(val); clearError("content"); }} />
+                  </div>
+                  {errors.content && <span className="field-error">{errors.content}</span>}
                 </div>
                 <div className="form-row">
                   <div className="form-group">
                     <label>Meta Title</label>
                     <input
                       type="text"
-                      className="form-control"
+                      className={`form-control${errors.metaTitle ? " form-control-error" : ""}`}
                       placeholder="Enter meta title"
                       value={metaTitle}
-                      onChange={(e) => setMetaTitle(e.target.value)}
+                      onChange={(e) => { setMetaTitle(e.target.value); clearError("metaTitle"); }}
                     />
+                    {errors.metaTitle && <span className="field-error">{errors.metaTitle}</span>}
                   </div>
                   <div className="form-group">
                     <label>Meta Description</label>
                     <input
                       type="text"
-                      className="form-control"
+                      className={`form-control${errors.metaDescription ? " form-control-error" : ""}`}
                       placeholder="Enter meta description"
                       value={metaDescription}
-                      onChange={(e) => setMetaDescription(e.target.value)}
+                      onChange={(e) => { setMetaDescription(e.target.value); clearError("metaDescription"); }}
                     />
+                    {errors.metaDescription && <span className="field-error">{errors.metaDescription}</span>}
                   </div>
                 </div>
               </div>
@@ -143,7 +172,10 @@ export default function AddBlogPage() {
               <div className="form-card">
                 <div className="form-group">
                   <label>Banner Image</label>
-                  <div className="banner-upload-area" onClick={() => document.getElementById("banner-input").click()}>
+                  <div
+                    className={`banner-upload-area${errors.bannerImage ? " banner-upload-error" : ""}`}
+                    onClick={() => document.getElementById("banner-input").click()}
+                  >
                     {imagePreview ? (
                       <img src={imagePreview} alt="Banner" className="banner-upload-preview" />
                     ) : (
@@ -160,53 +192,58 @@ export default function AddBlogPage() {
                     onChange={handleImageChange}
                     style={{ display: "none" }}
                   />
+                  {errors.bannerImage && <span className="field-error">{errors.bannerImage}</span>}
                 </div>
                 <div className="form-group">
                   <label>Author</label>
-                  <select
-                    className="form-control"
-                    value={authorId}
-                    onChange={(e) => setAuthorId(e.target.value)}
-                    required
-                  >
-                    <option value="">Select Author</option>
-                    {authors.map((a) => (
-                      <option key={a.id} value={a.id}>{a.name}</option>
-                    ))}
-                  </select>
+                  <div className={errors.authorId ? "select-error-wrapper" : ""}>
+                    <Select
+                      options={authorOptions}
+                      value={authorOptions.find((o) => o.value === authorId) || null}
+                      onChange={(selected) => { setAuthorId(selected ? selected.value : ""); clearError("authorId"); }}
+                      placeholder="Select author"
+                      classNamePrefix="react-select"
+                      isClearable
+                    />
+                  </div>
+                  {errors.authorId && <span className="field-error">{errors.authorId}</span>}
                 </div>
                 <div className="form-group">
                   <label>Categories</label>
-                  <Select
-                    isMulti
-                    options={categoryOptions}
-                    value={categoryOptions.filter((o) => categoryIds.includes(o.value))}
-                    onChange={(selected) => setCategoryIds(selected.map((s) => s.value))}
-                    placeholder="Select categories"
-                    classNamePrefix="react-select"
-                  />
+                  <div className={errors.categoryIds ? "select-error-wrapper" : ""}>
+                    <Select
+                      isMulti
+                      options={categoryOptions}
+                      value={categoryOptions.filter((o) => categoryIds.includes(o.value))}
+                      onChange={(selected) => { setCategoryIds(selected.map((s) => s.value)); clearError("categoryIds"); }}
+                      placeholder="Select categories"
+                      classNamePrefix="react-select"
+                    />
+                  </div>
+                  {errors.categoryIds && <span className="field-error">{errors.categoryIds}</span>}
                 </div>
                 <div className="form-group">
                   <label>Tags</label>
-                  <Select
-                    isMulti
-                    options={tagOptions}
-                    value={tagOptions.filter((o) => tagIds.includes(o.value))}
-                    onChange={(selected) => setTagIds(selected.map((s) => s.value))}
-                    placeholder="Select tags"
-                    classNamePrefix="react-select"
-                  />
+                  <div className={errors.tagIds ? "select-error-wrapper" : ""}>
+                    <Select
+                      isMulti
+                      options={tagOptions}
+                      value={tagOptions.filter((o) => tagIds.includes(o.value))}
+                      onChange={(selected) => { setTagIds(selected.map((s) => s.value)); clearError("tagIds"); }}
+                      placeholder="Select tags"
+                      classNamePrefix="react-select"
+                    />
+                  </div>
+                  {errors.tagIds && <span className="field-error">{errors.tagIds}</span>}
                 </div>
                 <div className="form-group">
                   <label>Status</label>
-                  <select
-                    className="form-control"
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
-                  >
-                    <option value="published">Published</option>
-                    <option value="draft">Draft</option>
-                  </select>
+                  <Select
+                    options={statusOptions}
+                    value={statusOptions.find((o) => o.value === status) || statusOptions[0]}
+                    onChange={(selected) => setStatus(selected.value)}
+                    classNamePrefix="react-select"
+                  />
                 </div>
                 <button type="submit" className="btn-save btn-save-full" disabled={createBlog.isPending}>
                   {createBlog.isPending ? "Publishing..." : "Publish Blog"}

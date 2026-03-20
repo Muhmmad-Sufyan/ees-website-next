@@ -7,7 +7,8 @@ import showToast from "@/utils/showToast";
 import { setCredentials } from "@/store/slices/authSlice";
 import { AuthRepo } from "@/repos/auth/authRepo";
 import GuestGuard from "@/components/admin/GuestGuard";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaArrowLeft } from "react-icons/fa";
+import Link from "next/link";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -38,6 +39,9 @@ export default function AdminLogin() {
     <GuestGuard>
     <div className="admin-login-wrapper">
       <div className="admin-login-card">
+        <Link href="/" className="admin-login-back">
+          <FaArrowLeft /> Back to Home
+        </Link>
         <h3>Admin Login</h3>
         <p className="subtitle">EHYA Education Services</p>
         <form onSubmit={handleSubmit}>
