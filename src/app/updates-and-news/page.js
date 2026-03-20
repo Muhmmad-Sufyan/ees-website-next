@@ -73,12 +73,12 @@ export default function UpdatesAndNews() {
         <div className="container">
           <div className="news-grid-header">
             <h2>
-              All <em>Articles</em>
+              Latest <em>Updates</em> & News
             </h2>
             {total > 0 && (
               <span className="news-grid-count">
                 Showing {(page - 1) * perPage + 1}-
-                {Math.min(page * perPage, total)} of {total} articles
+                {Math.min(page * perPage, total)} of {total} updates
               </span>
             )}
           </div>
@@ -102,7 +102,7 @@ export default function UpdatesAndNews() {
                 <div className="col-12">
                   <div className="news-empty">
                     <i className="fa fa-newspaper-o"></i>
-                    <h3>No articles yet</h3>
+                    <h3>No updates yet</h3>
                     <p>Check back later for updates and news.</p>
                   </div>
                 </div>

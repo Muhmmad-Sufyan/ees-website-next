@@ -4,7 +4,7 @@ import { useGetPublicBlogs } from "@/hooks";
 
 export default function LatestNews() {
   const { data, isLoading } = useGetPublicBlogs({ per_page: 4 });
-  const blogs = data?.data || [];
+  const blogs = (data?.data || []).slice(0, 4);
 
   return (
     <section className="latest-news-section ptb-80">
