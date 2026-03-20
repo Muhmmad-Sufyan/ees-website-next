@@ -16,7 +16,7 @@ export default function LatestNews() {
               LATEST <em>UPDATES</em> & NEWS
             </h2>
           </div>
-          <Link href="/resources" className="latest-news-view-all">
+          <Link href="/updates-and-news" className="latest-news-view-all">
             VIEW ALL NEWS <i className="fa fa-arrow-right"></i>
           </Link>
         </div>
@@ -65,7 +65,7 @@ export default function LatestNews() {
                           : "-"}
                       </p>
                       <h4 className="latest-news-card-title">{blog.title}</h4>
-                      <Link href={`/blog/${blog.slug}`} className="latest-news-read-more">
+                      <Link href={`/updates-and-news/${blog.slug}`} className="latest-news-read-more">
                         READ MORE <i className="fa fa-arrow-right"></i>
                       </Link>
                     </div>
