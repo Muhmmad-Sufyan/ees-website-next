@@ -31,7 +31,7 @@ export default function About() {
 
   return (
     <div className="main-div">
-      <div className="bg-color">
+      <div className="abbg-color">
         <PageHeader
           className="about-ripple"
           imageClass="about-image"

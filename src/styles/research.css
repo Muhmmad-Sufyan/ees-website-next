@@ -60,8 +60,8 @@
     text-transform: capitalize;
 }
 
-.bg-color {
-    background-color: rgb(7 81 84);
+.rebg-color {
+    background-color: rgb(7 81 84) !important;
 }
 
 .research-image {

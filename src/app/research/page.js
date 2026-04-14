@@ -14,7 +14,7 @@ export default function Research() {
 
   return (
     <div className="main-div">
-    <div className="bg-color">
+    <div className="rebg-color">
       <PageHeader
         className="research-ripple"
         imageClass="research-image"
